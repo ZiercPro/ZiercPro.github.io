@@ -1,4 +1,4 @@
-# [Zierc.github.io](#ziercgithubio)
+# [Zierc.github.io](https://ziercpro.github.io/)
 
 ## 导航
 
