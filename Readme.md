@@ -1,9 +1,12 @@
-# [Zierc.github.io](https://ziercpro.github.io/)
+---
+title: name
+---
+
+# ZiercproLog
 
 ## 导航
 
-- [简介](#简介)
-
 ## 简介
 
-用 jekyll 设计自己的网站主题
+本仓库目的是学习设计自己的 Jekyll 主题网站
+学习 html+css+js
