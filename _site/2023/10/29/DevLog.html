@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/CSS/styles.scss" />
+    <title>Devlog</title>
+  </head>
+  <body>
+    
+
+<nav>
+  
+   <a
+      href="/" 
+       >
+      HOME 
+    </a>
+  
+   <a
+      href="/Blog.html" 
+       >
+      BLOG 
+    </a>
+  
+   <a
+      href="/about.html" 
+       >
+      ABOUT 
+    </a>
+  
+</nav>
+    <h1>DEVLOG</h1>
+    <h1>Devlog</h1>
+<p>29 Oct 2023-Zierc</p>
+
+<h1 id="地牢大杂烩-开发日记">地牢大杂烩 开发日记</h1>
+
+<h2 id="日期">日期</h2>
+
+<ul>
+  <li>
+    <h3 id="2023">2023</h3>
+    <ul>
+      <li><a href="#1026">10.26</a></li>
+      <li><a href="#1028">10.28</a></li>
+      <li><a href="#1029">10.29</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1026">10.26</h2>
+
+<p>优化了 weaponHolder 和 weapon 的的代码 解决了<strong>静态分配和动态分配</strong>的问题
+现在代码会自动为武器配置相关需要的组件
+weaponHolder 中有个装备武器和卸载武器的函数 <strong>是为了 WeaponHolder 统一的配置</strong>
+weapon 中也有装备武器的函数 因为<strong>不同类型的武器装备配置不同</strong>
+碰撞检测把<strong>自身排除</strong>了</p>
+
+<p>英雄的数据放在的<strong>ScriptObject</strong>HeroData 中</p>
+
+<p><strong>攻击系统</strong>使用<strong>策略模式</strong> 不同的攻击类型用不同的函数 但是现在还是有<strong>重复的代码</strong></p>
+
+<hr />
+
+<h2 id="1028">10.28</h2>
+
+<p>修改了伤害 ui 跳出动画 先变大 后变小</p>
+
+<p>优化了部分代码 <strong>static</strong> 是需要手动配置好并且<strong>不再改变</strong>的 <strong>dynamic</strong> 是可能会再游戏过程中<strong>动态再分配</strong>的</p>
+
+<p>更改了 <strong>enemyAI</strong> 以后如果有直接改变敌人攻击对象的能力 攻击对象由武器传递 而<strong>不</strong>由敌人 AI 决定</p>
+
+<hr />
+
+<h2 id="1029">10.29</h2>
+
+<p>添加了背景 包括<strong>粒子效果和英雄柱</strong>
+设置了<strong>移动视差</strong> 模拟真实场景
+制作的怪物生成的动画
+制作了大嘴的死亡粒子效果</p>
+
+
+  </body>
+</html>

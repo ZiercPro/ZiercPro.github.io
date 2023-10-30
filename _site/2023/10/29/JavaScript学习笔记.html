@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/CSS/styles.scss" />
+    <title>Javascript学习笔记</title>
+  </head>
+  <body>
+    
+
+<nav>
+  
+   <a
+      href="/" 
+       >
+      HOME 
+    </a>
+  
+   <a
+      href="/Blog.html" 
+       >
+      BLOG 
+    </a>
+  
+   <a
+      href="/about.html" 
+       >
+      ABOUT 
+    </a>
+  
+</nav>
+    <h1>JAVASCRIPT学习笔记</h1>
+    <h1>Javascript学习笔记</h1>
+<p>29 Oct 2023-Zierc</p>
+
+<h1 id="javascript-学习笔记">JavaScript 学习笔记</h1>
+
+<h2 id="导航">导航</h2>
+
+<ul>
+  <li><a href="#简介">简介</a></li>
+  <li><a href="#引入-html">引入 HTML</a></li>
+  <li><a href="#输出方式">输出方式</a></li>
+  <li><a href="#变量">变量</a>
+    <ul>
+      <li><a href="#es5-中的六种数据类型">ES5 中的六种数据类型</a></li>
+      <li><a href="#es6-中新加的一个数据类型">ES6 中新加的一个数据类型</a></li>
+      <li><a href="#常用对象">常用对象</a>
+        <ul>
+          <li><a href="#math">Math</a></li>
+          <li><a href="#date">Date</a></li>
+          <li><a href="#dom">DOM</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#运算符">运算符</a></li>
+  <li><a href="#函数">函数</a></li>
+</ul>
+
+<hr />
+
+<h2 id="简介">简介</h2>
+
+<ul>
+  <li>轻量级脚本语言</li>
+  <li>可以插入 <strong>html</strong> 页面并被所有浏 览器运行</li>
+  <li>学习容易 ?</li>
+</ul>
+
+<h3 id="组成">组成</h3>
+
+<hr />
+
+<h2 id="引入-html">引入 HTML</h2>
+
+<p>两种方式</p>
+
+<ol>
+  <li>直接在 html 脚本中的 script 中写 js 代码</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="kd">function</span> <span class="nf">ChangeText</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">x</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">x</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hello JavaScript</span><span class="dl">"</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>注：html 代码中 script 标签可以写在任意位置</p>
+</blockquote>
+
+<ol>
+  <li>先创建一个本地 js 文件/获取网络 js 文件 再通过”script src”把他引入</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"文件地址"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="输出方式">输出方式</h2>
+
+<ol>
+  <li>弹出框
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">输出内容</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>直接输出到页面上</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="dl">"</span><span class="s2">输出内容(可以包含html的代码)</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>控制台
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">要输出的内容</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="变量">变量</h2>
+
+<h3 id="es5-中的六种数据类型">ES5 中的六种数据类型</h3>
+
+<ol>
+  <li>
+    <p>原始数据类型/ 基本数据类型</p>
+
+    <ul>
+      <li>数值</li>
+      <li>布尔值</li>
+      <li>字符串</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">//数值</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">你好</span><span class="dl">"</span><span class="p">;</span> <span class="c1">//字符串</span>
+<span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">//布尔</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>合成数据类型/ 引用数据类型</p>
+
+    <ul>
+      <li>null
+        <blockquote>
+          <p>数据为空值 引用类型中的空</p>
+        </blockquote>
+      </li>
+      <li>undefined
+        <blockquote>
+          <p>数据不为空 但是没有初始化 基本类型里的空</p>
+        </blockquote>
+      </li>
+      <li>对象</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//赋值使用:</span>
+<span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">wang</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="na">t</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">get</span><span class="p">:</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//对象方法</span>
+  <span class="p">},</span>
+  <span class="na">array</span><span class="p">:</span> <span class="p">[</span><span class="dl">""</span><span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>可以说<strong>没有数据类型声明</strong>可言 泛型
+赋值类似写作表达 可以说很亲民
+<strong>对象类型</strong>组成数据甚至不需要说明是数据</p>
+</blockquote>
+
+<blockquote>
+  <p>null undefined 日常使用时意思几乎一样 为什么有两个呢? 有一部分<a href="https://juejin.cn/post/6952747073124958245">历史原因 :)</a></p>
+</blockquote>
+
+<h3 id="es6-中新加的一个数据类型">ES6 中新加的一个数据类型</h3>
+
+<h3 id="常用对象">常用对象</h3>
+
+<h4 id="math">Math</h4>
+
+<ol>
+  <li>方法
+    <ol>
+      <li>静态
+Math.abs() 绝对值
+Math.max/min() 最大小值
+Math.floor/ceil() 取整
+Math.random() 随机数(&gt;=0 &lt;1)</li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="date">Date</h4>
+
+<blockquote>
+  <p>单位是毫秒 默认从 1970 1 月 1 日 00.00.00 作为时间的零点</p>
+</blockquote>
+
+<blockquote>
+  <p>实例对象可以直接输出</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>方法</p>
+
+    <ol>
+      <li>静态
+Date.now()</li>
+      <li>非静态
+getTime :返回实例距离零点的毫秒数
+getDate : 返回实例对象对应每个月的几号
+getDay : 返回星期( 周日为 0 周一为 1 …)
+getYear : 返回距离 1900 的年数
+getFullYear :返回年份
+getMonth : 返回月份 0 表示 1 月 …
+getHours :返回小时
+getMilliseconds :返回毫秒
+getMinutes :返回分钟
+getSeconds :返回秒</li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="dom">DOM</h4>
+
+<blockquote>
+  <p>它将网页转为 javascript 的一个对象 从而让 js 能够通过节点控制网页操作</p>
+</blockquote>
+
+<p>如果将 document 打印 会得到整个 html 的代码</p>
+
+<h5 id="nodenodetype-属性">Node.nodeType 属性</h5>
+
+<ul>
+  <li>文档节点(document) :9 Node.DOCUMENT_NODE</li>
+  <li>元素节点(element) :1 Node.ELEMENT_NODE</li>
+  <li>属性节点(attr) :2 Node.ATTRIBUTE_NODE</li>
+  <li>文本(text) :3 Node.TEXT_NODE</li>
+  <li>文档片段节点(DocumentFragment):11 Node.DOCUMENT_FRAGMENT_NODE</li>
+</ul>
+
+<h5 id="获取元素">获取元素</h5>
+
+<blockquote>
+  <p>通过 innerHTML 可以修改整个元素</p>
+</blockquote>
+
+<ul>
+  <li>document.getElementsByTagName(“x”)
+返回文档中所有 x html 元素</li>
+  <li>document.getElementsByClassName(“x”)
+返回文档中所有 x 类的元素(一般表示 CSS 的元素)</li>
+</ul>
+
+<hr />
+
+<h2 id="运算符">运算符</h2>
+
+<ul>
+  <li>算数</li>
+  <li>赋值</li>
+  <li>比较</li>
+  <li>布尔
+    <blockquote>
+      <p>^这四种与其他编程语言类似</p>
+    </blockquote>
+  </li>
+  <li>typeof
+    <blockquote>
+      <p>检测数据类型 number boolean object</p>
+    </blockquote>
+  </li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">wang</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="na">t</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">name</span><span class="p">);</span> <span class="c1">//string</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">user</span><span class="p">);</span> <span class="c1">//object</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="函数">函数</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">funcName</span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span> <span class="nx">参数2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//函数实现</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>无返回类型声明 无参数类型声明 无作用域声明 主打的就是简单</p>
+
+<p>要返回就直接 return</p>
+
+
+  </body>
+</html>
