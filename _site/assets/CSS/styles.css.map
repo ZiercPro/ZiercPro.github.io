@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../_sass/main.scss"],"names":[],"mappings":"AAAA;EACE;EACA;;;AAEF;EACE;EACA","sourcesContent":[".navfont-on {\r\n  color: coral;\r\n  font-size: 40px;\r\n}\r\n.navfont-off {\r\n  color: coral;\r\n  font-size: 20px;\r\n}\r\n"],"file":"styles.css"}

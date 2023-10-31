@@ -1,9 +1,10 @@
 ---
-layout: post
 author: Zierc
 ---
 
 # Github 托管静态网站
+
+> 有待完善
 
 ## 步骤
 

@@ -6,3 +6,6 @@
 
 - name: About
   link: /about.html
+
+- name: Authors
+  link: /authors.html
