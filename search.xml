@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo+github静态托管搭建个人博客</title>
+    <url>/2024/04/10/Hexo-github%E9%9D%99%E6%80%81%E6%89%98%E7%AE%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h2 id="请先看文章-小茗同学大佬的搭建教程"><a href="#请先看文章-小茗同学大佬的搭建教程" class="headerlink" title="请先看文章:小茗同学大佬的搭建教程"></a>请先看文章:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学大佬的搭建教程</a></h2><h3 id="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"><a href="#由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）" class="headerlink" title="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"></a>由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）</h3><ul>
+<li>关于<code>_config.yml</code>的配置，<code>master</code>要更换为<code>main</code></li>
+<li>关于 url 配置，文章中没有提到，但是笔者在搭建时发现，<strong>url 对大小写要求很严格</strong>，如果你的 github 域名没有完全正确的填写，那么网站的样式是加载不出来的</li>
+<li>CNAME 必须移到<code>source</code>文件夹中进行保留</li>
+</ul>
+<h2 id="针对主题ButterFly遇到的问题"><a href="#针对主题ButterFly遇到的问题" class="headerlink" title="针对主题ButterFly遇到的问题"></a>针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2><h3 id="主题不显示"><a href="#主题不显示" class="headerlink" title="主题不显示"></a>主题不显示</h3><p>在切换主题之后，主题不显示，只显示一行文本：<br><code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>解决方案为：在根目录中执行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+
+<p>然后重新构建，并在本地测试即可<br>如果还有什么问题请先运行<code>hexo clean</code> 之后再重新运行<code>hexo g</code></p>
+<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p>由于笔者没有仔细看 <code>_config.yml</code> 的选项，导致设置背景图片一直在网上寻找陈年方法，都没有效果，浪费了很多时间（4 小时）还没成功，后经过官方大佬点拨发现在<code>_config.yml</code>偏后半段，有<code>background</code>进行背景图片设置，如下图：<br><img src="/2024/04/10/Hexo-github%E9%9D%99%E6%80%81%E6%89%98%E7%AE%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2024-04-10_21-14-27.png"></p>
+<div class="note simple"><p>因为 background 设置在比较后面，我并没有在官方文档中找到，所以不知道官方文档中有没有（肯定是有的），现身说法，望诸位不要像我一样犯傻</p>
+</div>
+
+<p>另附一张与官方大佬<strong>斗智斗勇</strong>的精彩画面。<del>望周知</del><br><img src="/2024/04/10/Hexo-github%E9%9D%99%E6%80%81%E6%89%98%E7%AE%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image.png" alt="我是傻逼"></p>
+<h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码"><a href="#想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码" class="headerlink" title="想要自定义其他样式，可以参考Butterfly 官方文档 | 获取本站源码"></a>想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3><p>参考文献：<br><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br><a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示 https://www.jianshu.com/p/aa936a8369fb</a><br><a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>画展</title>
+    <url>/gallery/index.html</url>
+    <content><![CDATA[<div class="gallery-group-main">
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src="https://s2.loli.net/2024/04/11/5EfvsRmwIqp1QJt.png" alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">米山舞</div>
+  <p>大大我爱你</p>
+  <a href="/Gallery/yoneyama%20mei"></a>
+  </figcaption>
+  </figure>
+  
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src="https://s2.loli.net/2024/04/11/LgwBTIWvzUcHQ24.png" alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">个人</div>
+  <p>不会画画的渣渣</p>
+  <a href="/Gallery/%E4%B8%AA%E4%BA%BA"></a>
+  </figcaption>
+  </figure>
+  
+</div>
+]]></content>
+  </entry>
+  <entry>
+    <title>友人</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+</search>
