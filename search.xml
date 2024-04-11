@@ -17,6 +17,10 @@
 </div>
 
 <p>另附一张与官方大佬<strong>斗智斗勇</strong>的精彩画面。<del>望周知</del><br><img src="/2024/04/10/Hexo-github%E9%9D%99%E6%80%81%E6%89%98%E7%AE%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image.png" alt="我是傻逼"></p>
+<h3 id="使用gitalk设置评论模块"><a href="#使用gitalk设置评论模块" class="headerlink" title="使用gitalk设置评论模块"></a>使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h3><p>关于配置，笔者来帮忙避坑</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写道引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
+
+<p>其他的按照 gitalk 和 butterfly 文档 copy 即可</p>
 <h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码"><a href="#想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码" class="headerlink" title="想要自定义其他样式，可以参考Butterfly 官方文档 | 获取本站源码"></a>想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3><p>参考文献：<br><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br><a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示 https://www.jianshu.com/p/aa936a8369fb</a><br><a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a></p>
 ]]></content>
       <categories>
