@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ziercpro.github.io/2024/04/10/Hexo-github%E9%9D%99%E6%80%81%E6%89%98%E7%AE%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://zierc.cn/2024/04/10/Hexo-github%E9%9D%99%E6%80%81%E6%89%98%E7%AE%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2024-04-11</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://ziercpro.github.io/gallery/index.html</loc>
+    <loc>https://zierc.cn/gallery/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://ziercpro.github.io/tags/index.html</loc>
+    <loc>https://zierc.cn/tags/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://ziercpro.github.io/link/index.html</loc>
+    <loc>https://zierc.cn/link/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://ziercpro.github.io/about/index.html</loc>
+    <loc>https://zierc.cn/about/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://ziercpro.github.io/categories/index.html</loc>
+    <loc>https://zierc.cn/categories/index.html</loc>
     
     <lastmod>2024-04-11</lastmod>
     
@@ -57,7 +57,7 @@
   
 
   <url>
-    <loc>https://ziercpro.github.io/</loc>
+    <loc>https://zierc.cn/</loc>
     <lastmod>2024-04-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -65,7 +65,7 @@
 
   
   <url>
-    <loc>https://ziercpro.github.io/tags/Hexo/</loc>
+    <loc>https://zierc.cn/tags/Hexo/</loc>
     <lastmod>2024-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -74,7 +74,7 @@
 
   
   <url>
-    <loc>https://ziercpro.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://zierc.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
