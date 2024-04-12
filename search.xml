@@ -12,11 +12,11 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
 
 <p>然后重新构建，并在本地测试即可<br>如果还有什么问题请先运行<code>hexo clean</code> 之后再重新运行<code>hexo g</code></p>
-<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p>由于笔者没有仔细看 <code>_config.yml</code> 的选项，导致设置背景图片一直在网上寻找陈年方法，都没有效果，浪费了很多时间（4 小时）还没成功，后经过官方大佬点拨发现在<code>_config.yml</code>偏后半段，有<code>background</code>进行背景图片设置，如下图：<br><img src="/zierc/2443647d.htm/Snipaste_2024-04-10_21-14-27.png"></p>
+<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p>由于笔者没有仔细看 <code>_config.yml</code> 的选项，导致设置背景图片一直在网上寻找陈年方法，都没有效果，浪费了很多时间（4 小时）还没成功，后经过官方大佬点拨发现在<code>_config.yml</code>偏后半段，有<code>background</code>进行背景图片设置，如下图：<br><img src="/zierc/2443647d/Snipaste_2024-04-10_21-14-27.png"></p>
 <div class="note simple"><p>因为 background 设置在比较后面，我并没有在官方文档中找到，所以不知道官方文档中有没有（肯定是有的），现身说法，望诸位不要像我一样犯傻</p>
 </div>
 
-<p>另附一张与官方大佬<strong>斗智斗勇</strong>的精彩画面。<del>望周知</del><br><img src="/zierc/2443647d.htm/image.png" alt="我是傻逼"></p>
+<p>另附一张与官方大佬<strong>斗智斗勇</strong>的精彩画面。<del>望周知</del><br><img src="/zierc/2443647d/image.png" alt="我是傻逼"></p>
 <h3 id="使用gitalk设置评论模块"><a href="#使用gitalk设置评论模块" class="headerlink" title="使用gitalk设置评论模块"></a>使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h3><p>关于配置，笔者来帮忙避坑</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写道引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
 
@@ -33,11 +33,6 @@
   <entry>
     <title>关于</title>
     <url>/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -64,6 +59,11 @@
   
 </div>
 ]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>有幸相遇</title>
