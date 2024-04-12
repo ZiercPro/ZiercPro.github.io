@@ -1,0 +1,40 @@
+#cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(-45deg, #927aff, #e22c72, #4d20ee, #42ff29);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  border-radius: 12px;
+  opacity: 0.45;
+  z-index: 10086;
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+  transition-property: background, opacity, transform;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#cursor.hidden {
+  opacity: 0;
+}
+
+#cursor.hover {
+  opacity: 0.35;
+  transform: scale(2);
+}
+
+#cursor.active {
+  opacity: 0.7;
+  transform: scale(0.75);
+}
