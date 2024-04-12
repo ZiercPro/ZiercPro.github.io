@@ -3,7 +3,10 @@
   <entry>
     <title>Hexo+github静态托管搭建个人博客</title>
     <url>/zierc/2443647d.html</url>
-    <content><![CDATA[<h2 id="请先看文章-小茗同学大佬的搭建教程"><a href="#请先看文章-小茗同学大佬的搭建教程" class="headerlink" title="请先看文章:小茗同学大佬的搭建教程"></a>请先看文章:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学大佬的搭建教程</a></h2><h3 id="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"><a href="#由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）" class="headerlink" title="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"></a>由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）</h3><ul>
+    <content><![CDATA[<div class="note danger simple"><p>请注意本文的发表日期</p>
+</div>
+
+<h2 id="网站搭建和主题配置"><a href="#网站搭建和主题配置" class="headerlink" title="网站搭建和主题配置"></a>网站搭建和主题配置</h2><h3 id="请先看文章-小茗同学大佬的搭建教程"><a href="#请先看文章-小茗同学大佬的搭建教程" class="headerlink" title="请先看文章:小茗同学大佬的搭建教程"></a>请先看文章:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学大佬的搭建教程</a></h3><h3 id="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"><a href="#由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）" class="headerlink" title="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"></a>由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）</h3><ul>
 <li>关于<code>_config.yml</code>中<code>deploy</code>的<code>branch</code>的配置，<code>master</code>要更换为<code>main</code></li>
 <li>关于 url 配置，文章中没有提到，但是笔者在搭建时发现，<strong>url 对大小写要求很严格</strong>，如果你的 github 域名没有完全正确的填写，那么网站的样式是加载不出来的</li>
 <li>CNAME 必须移到<code>source</code>文件夹中进行保留</li>
@@ -17,7 +20,7 @@
 <p>在根目录中的<code>_conflg.yml</code>中配置生成链接</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: zierc/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32 # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex</span><br></pre></td></tr></table></figure>
 
-<div class="note simple"><p>注意：上述代码中<code>zierc</code>为自定义内容，你想咋填咋填，但是会影响到关于<strong>图片位置生成的操作（hexo-asset-image 插件）</strong></p>
+<div class="note warning simple"><p>注意：上述代码中<code>zierc</code>为自定义内容，你想咋填咋填，但是会影响到关于<strong>图片位置生成的操作（hexo-asset-image 插件）</strong></p>
 </div>
 
 <p>由于<code>_config.yml</code>已经设置了 permalink， 这里重复设置，此时构建会报错，所以需要<strong>如下图</strong>一样注释一些默认的代码<br><img src="/zierc/2443647d/Snipaste_2024-04-12_09-48-39.png"></p>
@@ -28,12 +31,19 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var abbrlink = data.abbrlink;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>然后在大概第 58 行左右，将代码<code>$(this).attr(&#39;src&#39;, config.root + link + src);</code>修改为<code> $(this).attr(&#39;src&#39;, config.root +&#39;zierc/&#39; +abbrlink +&#39;/&#39;+ src);</code><div class="note simple"><p>注意：此处回应前面的提示，修改之后的代码中<code>zierc</code>为自定义内容，你之前填的什么，现在就修改成什么</p>
+<li>然后在大概第 58 行左右，将代码<code>$(this).attr(&#39;src&#39;, config.root + link + src);</code>修改为<code> $(this).attr(&#39;src&#39;, config.root +&#39;zierc/&#39; +abbrlink +&#39;/&#39;+ src);</code><div class="note warning simple"><p>注意：此处回应前面的提示，修改之后的代码中<code>zierc</code>为自定义内容，你之前填的什么，现在就修改成什么</p>
 </div></li>
 </ul>
 <p>之后为了防止一些奇怪的问题，直接 hexo 三件套就可以了</p>
 <h2 id="双线部署"><a href="#双线部署" class="headerlink" title="双线部署"></a>双线部署</h2><p>由于 github 部署访问太慢了<br>所以添加一个国内的 coding 部署，提高访问速度</p>
-<h3 id="如何实现-1"><a href="#如何实现-1" class="headerlink" title="如何实现"></a>如何实现</h3><p>本文的实现主要是参考了这位大佬<br>如果你发现本文的方法不行，可以尝试另一位大佬的博客（本人嫌麻烦没有尝试</p>
+<h3 id="如何实现-1"><a href="#如何实现-1" class="headerlink" title="如何实现"></a>如何实现</h3><p>首先，请详细观看<a href="https://blog.juanertu.com/">卷二兔</a>大佬的<a href="https://www.bilibili.com/video/BV1hF411v7e1/?vd_source=27f2b246cedeb85170372b3386cefa14">b 站视频教程</a>本文的实现主要是参考了这位大佬。当你观看视频时，可能会发现一些场景和视频中不同，这就是笔者在此的作用了</p>
+<h4 id="deploy-配置"><a href="#deploy-配置" class="headerlink" title="deploy 配置"></a>deploy 配置</h4><p><code>_config.yml</code>配置和视频中所示不同，经过笔者尝试，如果按照视频的格式配置，会出现腾讯云和 GitHub 都不会自动部署的问题，经过查看 hexo 的文档和各种资料，笔者得到以下成功的配置方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: &quot;git&quot;</span><br><span class="line">    repository: git@github.com:ZiercPro/ZiercPro.github.io.git</span><br><span class="line">    branch: main</span><br><span class="line">  - type: &quot;git&quot;</span><br><span class="line">    repository: coding仓库地址</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+
+<p>如果这个也无法帮助到你，那可能需要你移步了，对此笔者感到非常抱歉。</p>
+<div class="note warning simple"><p>如果你发现该视频的方法不行，可以尝试另一位大佬的方法（笔者嫌麻烦没有尝试，但是这已经是笔者能找到的最新的方法了）<a href="https://www.cnblogs.com/Chen0495/p/17947479">文档链接-&gt;</a></p>
+</div>
+
 <h2 id="针对主题ButterFly遇到的问题"><a href="#针对主题ButterFly遇到的问题" class="headerlink" title="针对主题ButterFly遇到的问题"></a>针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2><h3 id="主题不显示"><a href="#主题不显示" class="headerlink" title="主题不显示"></a>主题不显示</h3><p>在切换主题之后，主题不显示，只显示一行文本：<br><code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>解决方案为：在根目录中执行以下命令</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
 
@@ -42,12 +52,13 @@
 <div class="note simple"><p>因为 background 设置在比较后面，我并没有在官方文档中找到，所以不知道官方文档中有没有（肯定是有的），现身说法，望诸位不要像我一样犯傻</p>
 </div>
 
-<p>另附一张与官方大佬<strong>斗智斗勇</strong>的精彩画面。<del>望周知</del><br><img src="/zierc/2443647d/image.png" alt="我是傻逼"></p>
-<h3 id="使用gitalk设置评论模块"><a href="#使用gitalk设置评论模块" class="headerlink" title="使用gitalk设置评论模块"></a>使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h3><p>关于配置，笔者来帮忙避坑</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写道引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
+<p>另附一张与官方大佬”<strong>斗智斗勇</strong>“的精彩画面。<del>望周知</del><br><img src="/zierc/2443647d/image.png" alt="我是傻逼"></p>
+<h3 id="使用gitalk设置评论模块"><a href="#使用gitalk设置评论模块" class="headerlink" title="使用gitalk设置评论模块"></a>使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h3><p>先找到 <a href="https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96">butterfly 文档</a>中的<code>评论</code>，它会让你跟随<a href="https://github.com/gitalk/gitalk">gitalk</a>的教程，内容简单易懂</p>
+<h4 id="关于配置，笔者来帮忙避坑"><a href="#关于配置，笔者来帮忙避坑" class="headerlink" title="关于配置，笔者来帮忙避坑"></a>关于配置，笔者来帮忙避坑</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写到引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
 
-<p>其他的按照 gitalk 和 butterfly 文档 copy 即可</p>
-<h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码"><a href="#想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码" class="headerlink" title="想要自定义其他样式，可以参考Butterfly 官方文档 | 获取本站源码"></a>想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3><p>参考文献：<br><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br><a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示 https://www.jianshu.com/p/aa936a8369fb</a><br><a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a></p>
+<h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码"><a href="#想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码" class="headerlink" title="想要自定义其他样式，可以参考Butterfly 官方文档 | 获取本站源码"></a>想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3><h2 id="笔者的吐槽"><a href="#笔者的吐槽" class="headerlink" title="笔者的吐槽"></a>笔者的吐槽</h2><p>笔者搭建过程中，一大感触就是，怎么感觉他们的过程和我的有点不一样，似乎很多文章都有点过时了。尽管最后，这些文章大概率依旧能够帮到笔者，但是总是会让笔者陷入混乱：这里到底该这样还是那样，为什么呢。当然，这个问题和有些<strong>平台或工具更新过快</strong>也脱不了关系。<br>所以笔者也在在本文顶部预先提醒读者，注意本文的时效性，可能一小段时间后，这篇文章就已经不能食用了，如果你发现这篇文章已经是数年前的古董，那还是找一篇更新的教程来看吧</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这是笔者第一篇文章，诸多问题，不用谅解，直接来找我私聊即可（<br>如果有什么问题，可以发表评论或者通过各种渠道找我</p>
+<p>参考文献：<br><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗大佬 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br><a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示问题 https://www.jianshu.com/p/aa936a8369fb</a><br><a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a><br><a href="https://blog.juanertu.com/">卷二兔大佬 https://blog.juanertu.com</a></p>
 ]]></content>
       <categories>
         <category>技术</category>
