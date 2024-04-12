@@ -32,7 +32,8 @@
 </div></li>
 </ul>
 <p>之后为了防止一些奇怪的问题，直接 hexo 三件套就可以了</p>
-<h2 id="针对主题ButterFly遇到的问题"><a href="#针对主题ButterFly遇到的问题" class="headerlink" title="针对主题ButterFly遇到的问题"></a>针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2><h3 id="主题不显示"><a href="#主题不显示" class="headerlink" title="主题不显示"></a>主题不显示</h3><p>在切换主题之后，主题不显示，只显示一行文本：<br><code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>解决方案为：在根目录中执行以下命令</p>
+<h2 id="双线部署"><a href="#双线部署" class="headerlink" title="双线部署"></a>双线部署</h2><p>由于 github 部署访问太慢了<br>所以添加一个国内的 coding 部署，提高访问速度</p>
+<h3 id="如何实现-1"><a href="#如何实现-1" class="headerlink" title="如何实现"></a>如何实现</h3><h2 id="针对主题ButterFly遇到的问题"><a href="#针对主题ButterFly遇到的问题" class="headerlink" title="针对主题ButterFly遇到的问题"></a>针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2><h3 id="主题不显示"><a href="#主题不显示" class="headerlink" title="主题不显示"></a>主题不显示</h3><p>在切换主题之后，主题不显示，只显示一行文本：<br><code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>解决方案为：在根目录中执行以下命令</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
 
 <p>然后重新构建，并在本地测试即可<br>如果还有什么问题请先运行<code>hexo clean</code> 之后再重新运行<code>hexo g</code></p>
