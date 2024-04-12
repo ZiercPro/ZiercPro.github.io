@@ -8,6 +8,30 @@
 <li>关于 url 配置，文章中没有提到，但是笔者在搭建时发现，<strong>url 对大小写要求很严格</strong>，如果你的 github 域名没有完全正确的填写，那么网站的样式是加载不出来的</li>
 <li>CNAME 必须移到<code>source</code>文件夹中进行保留</li>
 </ul>
+<h2 id="链接永久化"><a href="#链接永久化" class="headerlink" title="链接永久化"></a>链接永久化</h2><div class="note simple"><p>减少网页链接丢失，同时减少 url 的层级，对爬虫比较友好</p>
+</div>
+
+<h3 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h3><p>下载插件<code>hexo-abbrlink</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>在根目录中的<code>_conflg.yml</code>中配置生成链接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: zierc/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32 # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex</span><br></pre></td></tr></table></figure>
+
+<div class="note simple"><p>注意：上述代码中<code>zierc</code>为自定义内容，你想咋填咋填，但是会影响到关于<strong>图片位置生成的操作（hexo-asset-image 插件）</strong></p>
+</div>
+
+<p>由于<code>_config.yml</code>已经设置了 permalink， 这里重复设置，此时构建会报错，所以需要<strong>如下图</strong>一样注释一些默认的代码<br><img src="/zierc/2443647d/Snipaste_2024-04-12_09-48-39.png"></p>
+<h3 id="如果你使用了hexo-asset-image"><a href="#如果你使用了hexo-asset-image" class="headerlink" title="如果你使用了hexo-asset-image"></a>如果你使用了<code>hexo-asset-image</code></h3><p>由于 image 的路径设置是根据 hexo 框架原来的路径走的，所以此时你会发现构建出的网站，图片无法加载<br>此时需要修改一下源码<br>找到目录<code>node_modules\hexo-asset-image\index.js</code></p>
+<ul>
+<li>在大概第 12 行左右<code>var link = data.permalink;</code>后面添加如下代码，用于定义变量 abbrlink，当然，具体添加到哪里看你自己的喜好，笔者只是为了逻辑清晰</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var abbrlink = data.abbrlink;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后在大概第 58 行左右，将代码<code>$(this).attr(&#39;src&#39;, config.root + link + src);</code>修改为<code> $(this).attr(&#39;src&#39;, config.root +&#39;zierc/&#39; +abbrlink +&#39;/&#39;+ src);</code><div class="note simple"><p>注意：此处回应前面的提示，修改之后的代码中<code>zierc</code>为自定义内容，你之前填的什么，现在就修改成什么</p>
+</div></li>
+</ul>
+<p>之后为了防止一些奇怪的问题，直接 hexo 三件套就可以了</p>
 <h2 id="针对主题ButterFly遇到的问题"><a href="#针对主题ButterFly遇到的问题" class="headerlink" title="针对主题ButterFly遇到的问题"></a>针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2><h3 id="主题不显示"><a href="#主题不显示" class="headerlink" title="主题不显示"></a>主题不显示</h3><p>在切换主题之后，主题不显示，只显示一行文本：<br><code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>解决方案为：在根目录中执行以下命令</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
 
@@ -66,13 +90,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>有幸相遇</title>
-    <url>/link/index.html</url>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
+    <title>有幸相遇</title>
+    <url>/link/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
