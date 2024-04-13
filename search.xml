@@ -3,10 +3,7 @@
   <entry>
     <title>Hexo+github静态托管搭建个人博客</title>
     <url>/zierc/2443647d.html</url>
-    <content><![CDATA[<div class="note danger simple"><p>请注意本文的发表日期，确保本文时效性</p>
-</div>
-
-<hr>
+    <content><![CDATA[<hr>
 <h2 id="网站搭建和主题配置"><a href="#网站搭建和主题配置" class="headerlink" title="网站搭建和主题配置"></a>网站搭建和主题配置</h2><h3 id="请先看文章-小茗同学大佬的搭建教程"><a href="#请先看文章-小茗同学大佬的搭建教程" class="headerlink" title="请先看文章:小茗同学大佬的搭建教程"></a>请先看文章:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学大佬的搭建教程</a></h3><h3 id="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"><a href="#由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）" class="headerlink" title="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）"></a>由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）</h3><ul>
 <li>关于<code>_config.yml</code>中<code>deploy</code>的<code>branch</code>的配置，<code>master</code>要更换为<code>main</code></li>
 <li>关于 url 配置，文章中没有提到，但是笔者在搭建时发现，<strong>url 对大小写要求很严格</strong>，如果你的 github 域名没有完全正确的填写，那么网站的样式是加载不出来的</li>
@@ -69,7 +66,13 @@
 <div class="note warning simple"><p>但是这个鼠标样式还有个小问题，那就是鼠标如果在复制代码的按钮上时，会变回原指针</p>
 </div>
 
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>暂时没解决</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>按照原作者的意思，应该会检测元素中是否有<code>cursor:pointer</code> 于是笔者通过浏览器控制台，发现 copy 代码的按钮类名为<code>fas fa-paste copy-button</code><br>于是笔者又去查看源码，发现在<code>highlight.styl</code>文件中，关于<code>copy-button</code>代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.copy-button</span><br><span class="line">  position: absolute</span><br><span class="line">  right: 14px</span><br><span class="line">  cursor: pointer</span><br><span class="line">  transition: color .2s</span><br><span class="line"></span><br><span class="line">  &amp;:hover</span><br><span class="line">    color: $theme-color</span><br></pre></td></tr></table></figure>
+
+<p>这让笔者一脸懵逼，理论上来说应该能检测到<code>cursor:pointer</code>的啊<br>但是这些代码到底是什么意思，笔者也不知道，希望能有大佬来解决吧</p>
+<div class="note info simple"><p>提一嘴，笔者专门去其他人的博客中对比了，似乎这个问题并不针对这款鼠标样式，其他鼠标样式修改方法，同样检测不到 copy 按钮，会恢复原鼠标样式</p>
+</div>
+
 <h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码"><a href="#想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码" class="headerlink" title="想要自定义其他样式，可以参考Butterfly 官方文档 | 获取本站源码"></a>想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3><h2 id="使用gitalk设置评论模块"><a href="#使用gitalk设置评论模块" class="headerlink" title="使用gitalk设置评论模块"></a>使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h2><p>先找到 <a href="https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96">butterfly 文档</a>中的<code>评论</code>，它会让你跟随<a href="https://github.com/gitalk/gitalk">gitalk</a>的教程，内容简单易懂</p>
 <h3 id="关于配置，笔者来帮忙避坑"><a href="#关于配置，笔者来帮忙避坑" class="headerlink" title="关于配置，笔者来帮忙避坑"></a>关于配置，笔者来帮忙避坑</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写到引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
 
