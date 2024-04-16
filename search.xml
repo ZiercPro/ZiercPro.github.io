@@ -80,10 +80,34 @@
 <p>参考文献：<br><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗大佬 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br><a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示问题 https://www.jianshu.com/p/aa936a8369fb</a><br><a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a><br><a href="https://blog.juanertu.com/">卷二兔大佬 https://blog.juanertu.com</a></p>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计模式学习路线与思路</title>
+    <url>/zierc/a2617f52.html</url>
+    <content><![CDATA[<h2 id="学习设计模式之前"><a href="#学习设计模式之前" class="headerlink" title="学习设计模式之前"></a>学习设计模式之前</h2><p>先学习软件开发的基本原则，虽说笔者主攻方向为基于 Unity 引擎的游戏开发，但是游戏开发与软件开发有许多共通处，掌握学习游戏设计模式可以为后续开发与工具的学习运用打下坚实的基础</p>
+<h3 id="软件设计的原则"><a href="#软件设计的原则" class="headerlink" title="软件设计的原则"></a>软件设计的原则</h3><ul>
+<li>单一职责原则（SRP）</li>
+<li>开闭原则（OCP）</li>
+<li>里氏替换原则（LSP）</li>
+<li>依赖倒置原则（DIP）</li>
+<li>接口隔离原则（ISP）</li>
+<li>迪米特法则（LOD）</li>
+<li>合成&#x2F;聚合复用原则（CARP）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>框架</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
