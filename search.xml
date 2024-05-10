@@ -341,8 +341,8 @@
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">BubbleSort</span>(<span class="params"><span class="built_in">int</span>[] array</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">      <span class="comment">//外循环乱序数列[0,i]</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="built_in">int</span> i = array.Length - <span class="number">1</span>; i&gt;<span class="number">0</span> ; i--)</span><br><span class="line">      &#123;</span><br><span class="line">          <span class="comment">//内循环[0,i]将最大值移动到最后一位</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; i; j++)</span><br><span class="line">          &#123;</span><br><span class="line">              <span class="comment">//如果比下一位大，则交换</span></span><br><span class="line">              <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>])</span><br><span class="line">                  (array[j], array[j + <span class="number">1</span>]) = (array[j + <span class="number">1</span>], array[j]);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="选择排序">选择排序</h3>
 <p>还是很经典<br>
-思路：从乱序中，按照要求，选择最大或者最小值，在遍历完当前乱序数列后，将记录的最值与当前乱序数列的头部。乱序数列不断缩短，最后变为有序数列<br>
-实现：双循环，用局部变量分别记录最值的指针位置和数值，在循环结束后，比较最值指针和当前头部指针，如果相同，说明不需要交换直接进行下一次选择，否则交换两数。因为开始要有个默认的最值，所以选择的次数为 n-1(n 为数列长度)</p>
+思路：从乱序中，按照要求，选择最大或者最小值，在遍历完当前乱序数列后，将记录的最值放入有序数列中，乱序数列不断缩短，最后变为有序数列<br>
+实现：双循环，用局部变量分别记录最值的指针位置和数值，在循环结束后，比较最值指针和当前头部指针，如果相同，说明不需要交换直接进行下一次选择，否则交换两数，然后头部指针后移。因为开始要有个默认的最值，所以大循环的次数为 n-1(n 为数列长度)</p>
 <ul>
 <li>
 <p>数据</p>
