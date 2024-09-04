@@ -108,6 +108,248 @@
       </tags>
   </entry>
   <entry>
+    <title>Addressable热更新使用基础</title>
+    <url>/zierc/2ebdb5f2.html</url>
+    <content><![CDATA[<h2 id="热更新">热更新</h2>
+<h3 id="资源热更新">资源热更新</h3>
+<p>主要通过 AB 包来实现，比较简单。</p>
+<h3 id="代码热更新">代码热更新</h3>
+<p>csharp 代码打包以后就变成了二进制，和程序同时启动，无法修改。</p>
+<p><img src="/zierc/2ebdb5f2/Untitled.png" alt></p>
+<h3 id="热更新流程">热更新流程</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled%201.png" alt></p>
+<blockquote>
+<p>MD5 值 用 md5 算法，生成资源对应的唯一标识符，有助于资源的增量打包</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%202.png" alt></p>
+</blockquote>
+<h2 id="代码热更新的手段">代码热更新的手段</h2>
+<h3 id="Lua">Lua</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled%203.png" alt></p>
+<h3 id="ILRuntime">ILRuntime</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled%204.png" alt></p>
+<h3 id="puerts">puerts</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled%205.png" alt></p>
+<h3 id="HyBridCLR-huatuo">HyBridCLR(huatuo</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled%206.png" alt></p>
+<h2 id="AB-包"><s>AB 包</s></h2>
+<h3 id="AssetsBundle-Browser"><s>AssetsBundle Browser</s></h3>
+<h3 id="AssetsBundle-Browser-的安装"><s>AssetsBundle Browser 的安装</s></h3>
+<p><s>目前 unity packagemanager 已经找不到这个插件了</s></p>
+<p><s>需要到<a href="https://github.com/Unity-Technologies/AssetBundles-Browser"><strong>github</strong></a>去下载</s></p>
+<p><s>建议使用建议使用 url 的下载方式：unity 编辑器 →Window→packmanager→Add→Url 输入 github 上的获取链接</s></p>
+<h3 id="AssetsBundle-Browser-安装问题"><s>AssetsBundle Browser 安装问题</s></h3>
+<p><s>报错：boo 找不到</s></p>
+<p><s>这个 boo Unity 很久就不用了，并且这个报错的脚本在一个叫 Tests 的文件夹中，因此大概率是 unity 团队忘了维护，或者有其他的理由，总之直接把这个 tests 文件夹删了即可。</s></p>
+<hr>
+<h2 id="不再使用-abb">不再使用 abb</h2>
+<p>突然发现 unity 官方已经不推荐使用 abb 了而是 addressables assets system（AA</p>
+<p>所以现在来研究 AA</p>
+<h2 id="AssetStudio">AssetStudio</h2>
+<p>可以对未加密的 ab 包进行逆向工程，解析出资源。</p>
+<p>但是我这里软件加载资源出问题了，无法预览，也无法导出。</p>
+<h2 id="Addressables-Assets-System"><a href="https://blog.csdn.net/linxinfa/article/details/122390621">Addressables Assets System</a></h2>
+<p>Unity 新的打包工具，支持加密（应该，<a href="http://xn--ciqxcs7mws2a.CN">之前有个.CN</a> 的加强版，现在找不到了，猜测是合并到一起了。）</p>
+<h3 id="安装">安装</h3>
+<p>直接到 package manager 里面 install 即可</p>
+<h3 id="路径命名问题">路径命名问题</h3>
+<p>使用 ab 包时，资源路径不能出现’[]’，建议使用’()’代替</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%207.png" alt></p>
+<h3 id="两种不同的打包和加载方式">两种不同的打包和加载方式</h3>
+<ol>
+<li>包体内打包与加载</li>
+<li>包体外打包与加载</li>
+</ol>
+<p>包体内我理解为打包到本地，加载则直接到本地的加载目录加载</p>
+<p>包体外我理解为打包到服务器，加载则根据给定的服务器地址，进行加载（默认为本地</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%208.png" alt></p>
+<p>包体内打包的方式，在项目构建后会被打包到游戏文件内部</p>
+<p>包体外的则会在项目的 <code>ServerData/</code> 文件中</p>
+<h3 id="打包">打包</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled%209.png" alt></p>
+<p>点击即可按照设置进行打包</p>
+<h3 id="报错">报错</h3>
+<p>log 显示，有许多 unity 内置的模块居然找不到。<s>尝试换一个编译器版本。</s></p>
+<p>尝试新建项目，发现可以用了，之前的项目出于某种原因，似乎坏掉了。</p>
+<h3 id="加载资源">加载资源</h3>
+<blockquote>
+<p>tips:InstantiateAsync 函数可以直接将获取的资源实例化</p>
+</blockquote>
+<blockquote>
+<p>资源加载时，不需要管是远程资源还是本地资源</p>
+</blockquote>
+<h4 id="加载方法">加载方法</h4>
+<ol>
+<li>通过 Addressable Name 加载</li>
+</ol>
+<blockquote>
+<p>这种加载方式不需要管是本地资源包还是远程资源包</p>
+</blockquote>
+<p>代码如下:</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2010.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2011.png" alt></p>
+<p>把这个脚本挂载到一个场景中的游戏物体即可</p>
+<ol start="2">
+<li>通过引用(AssetsReference)方式加载</li>
+</ol>
+<p>原理是通过弱引用获取资源，然后根据弱引用实例化</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2012.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2013.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2014.png" alt></p>
+<h4 id="加载途径">加载途径</h4>
+<ol>
+<li>Use AssetDatabase</li>
+</ol>
+<p>这个就是直接加载资源，不是加载 ab 包，一般开发时就用这个就行，因为快。</p>
+<ol start="2">
+<li>Simulate Group</li>
+</ol>
+<p>在不打包的情况下，模拟 AssetBundle 的操作。这个模式下，可以通过分析器，查看资源加载状况，分析加载策略</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2015.png" alt></p>
+<ol start="3">
+<li>Use Exising Build</li>
+</ol>
+<p>这个模式则是真正的加载资源包</p>
+<h3 id="加载远程资源">加载远程资源</h3>
+<p>如果要在 editor 环境下进行测试，需要搭建 web 服务器。</p>
+<p>可以使用 addressable 的 Hosting Services 工具</p>
+<p>关于报错</p>
+<p>要在 project settings/Player/Configuration 中 把 Allow download over HTTP* 选为允许。</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2016.png" alt></p>
+<h3 id="打包模式和批量加载">打包模式和批量加载</h3>
+<p>每个 Group 都可以单独设置打包模式</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2017.png" alt></p>
+<p>三种模式，分别是 全部打进一个包中，全部分开打包，按照层级打包</p>
+<p>第一个就是默认的，第二个所有资源都会单独打成一个 bundle 文件。</p>
+<p>一般选第三个，将资源的层级设置好，就可以了，而且还能方便批量加载。</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2018.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2019.png" alt></p>
+<blockquote>
+<p>一个资源可以设置多个 lable</p>
+</blockquote>
+<p>批量加载，方法如下。</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2020.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2021.png" alt></p>
+<blockquote>
+<p>注意方法名变了。 Asset 和 Assets</p>
+</blockquote>
+<p><img src="/zierc/2ebdb5f2/Untitled%2022.png" alt></p>
+<h3 id="打资源热更新包">打资源热更新包</h3>
+<p>首先，要支持热更新，需要开启 Catalog</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2023.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2024.png" alt></p>
+<p>设置好资源打包加载路径。</p>
+<p>打包</p>
+<p>可能会报错，提示端口被占用，这是因为刚刚在测试远程加载时，开启了这个端口，现在只要 reset 一下就行，这个端口会被重新打开</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2025.png" alt></p>
+<p>现在打包出来的文件中，多了两个名为 catalog 的 .hash 和 . json 文件，用于增量打包时对比哪些文件发生了变化。</p>
+<p>现在将 Group 中，一个需要替换的资源去除，然后将要替换的资源命名为相同的名字，加入到 Group 中，选择 Update a previous Build</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2026.png" alt></p>
+<p>就会多一个更新包</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2027.png" alt></p>
+<p>现在再加载，就会加载更新后的资源。</p>
+<p>如果不更新，直接选择 Update… 就不会打新的包（亲测</p>
+<h3 id="关于资源释放">关于资源释放</h3>
+<p>要通过 Addressables.Release 释放加载 handle 或者加载的结果</p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2028.png" alt></p>
+<p><img src="/zierc/2ebdb5f2/Untitled%2029.png" alt></p>
+<h2 id="问题解决">问题解决</h2>
+<blockquote>
+<p>以下是教程中没有提及的内容，如果你要参考，建议先看<a href="https://blog.csdn.net/linxinfa/article/details/122390621">教程</a></p>
+</blockquote>
+<h3 id="首先是-unity-的设置问题，在-Player-的-Config-设置中，需要允许从-http-服务器下载资源">首先是 unity 的设置问题，在 Player 的 Config 设置中，需要允许从 http 服务器下载资源</h3>
+<p><img src="/zierc/2ebdb5f2/Untitled30.png" alt></p>
+<h3 id="然后是编辑器中-Addressable-asset-settings">然后是编辑器中 Addressable asset settings</h3>
+<p>如果要实现热更新，必须开启 <code>Build remote catalog</code>功能</p>
+<p>这个选项下面的 <code>Buid&amp;Load Paths</code> 指的是远程包对应的 catalog 的构建和加载路径路径</p>
+<p><img src="/zierc/2ebdb5f2/Untitled31.png" alt></p>
+<p>在构建项目，或者打包本地资源时，会输出两个同名文件 catalog，分别时.hash 和.json 后缀的文件。</p>
+<p>勾选上述的 <code>Build Remote Catalog</code> 功能后，复制一份 catalog 作为你远程资源的目录，这份 catalog 的位置取决于你选择的路径。</p>
+<p>个人理解，这份 catalog 应该作为最新的目录，放在服务器，用于进行资源更新对比。</p>
+<p>构建游戏时，addressable 会自动打一次 local 包，同时将这些包作为游戏打包时的包内资源。</p>
+<p>也就是说，游戏根目录中 streamingassets 文件中的资源，是由编辑器中所有 local 的 addressable 资源构成（包括所有 local 分组</p>
+]]></content>
+      <categories>
+        <category>Unity技术</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>资源热更新</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计学习笔记</title>
+    <url>/zierc/28626d28.html</url>
+    <content><![CDATA[<div class="note info simple"><p>更新中</p>
+</div>
+<h2 id="前言">前言</h2>
+<p>这个系列旨在记录笔者在学习游戏设计过程中的心得，同时能够将想法分享读者。</p>
+<h2 id="游戏剧情">游戏剧情</h2>
+<h3 id="剧情三角原则">剧情三角原则</h3>
+<p>在撰写游戏故事的时候，一般要关注三个方面，即<strong>角色</strong>、<strong>事件</strong>、<strong>世界</strong>，并且最好只侧重其中之一，否则会使得玩家感到不舒服</p>
+<h2 id="游戏文档">游戏文档</h2>
+<p>游戏文档可以针对不同的群体，也会因此导致其侧重点不同<br>
+比如你写给开发人员，那么文档就会注重一些玩法细节，如果是写给发行商负责人，那么可能就要多填充一些能激起他们兴趣的概念图，以及一些吸引人的游戏玩法<br>
+游戏文档的目的是为了沟通，这就揭示了编写游戏文档的原则—<strong>可读性</strong>。</p>
+<h3 id="单页说明">单页说明</h3>
+<ul>
+<li>游戏名</li>
+<li>游戏系统</li>
+<li>目标玩家年龄</li>
+<li>ESRB 分级
+<ul>
+<li>eC 幼儿</li>
+<li>e 所有人</li>
+<li>e10 10 岁以上的所有人</li>
+<li>t 青少年 含有少量暴力 暗示性主题及脏话</li>
+<li>m 17 岁以上 含有明显的暴力，血腥，暗示性主题</li>
+<li>AO 18 岁以上 含有明显暴力，血腥，暗示性主题并含有明显的性和裸露场景</li>
+</ul>
+</li>
+</ul>
+<h3 id="十页说明">十页说明</h3>
+<h3 id="游戏流程">游戏流程</h3>
+<h3 id="游戏设计文档">游戏设计文档</h3>
+<h2 id="参考文献">参考文献:</h2>
+<ul>
+<li>《通关！游戏设计之道》</li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏设计</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏代码设计模式学习路线与思路</title>
+    <url>/zierc/a2617f52.html</url>
+    <content><![CDATA[<div class="note info simple"><p>更新中</p>
+</div>
+<h2 id="学习设计模式之前">学习设计模式之前</h2>
+<p>先学习软件开发的基本原则，虽说笔者主攻方向为基于 Unity 引擎的游戏开发，但是游戏开发与软件开发有许多共通处，掌握学习游戏设计模式可以为后续开发与工具的学习运用打下坚实的基础</p>
+<h3 id="软件设计的原则">软件设计的原则</h3>
+<ul>
+<li>单一职责原则（SRP）</li>
+<li>开闭原则（OCP）</li>
+<li>里氏替换原则（LSP）</li>
+<li>依赖倒置原则（DIP）</li>
+<li>接口隔离原则（ISP）</li>
+<li>迪米特法则（LOD）</li>
+<li>合成/聚合复用原则（CARP）</li>
+</ul>
+<h3 id="本地部署测试">本地部署测试</h3>
+]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>八股文之排序算法</title>
     <url>/zierc/14ace8e0.html</url>
     <content><![CDATA[<div class="note info simple"><p>更新中</p>
@@ -352,247 +594,6 @@
       <tags>
         <tag>算法</tag>
         <tag>八股文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Addressable热更新使用基础</title>
-    <url>/zierc/2ebdb5f2.html</url>
-    <content><![CDATA[<h2 id="热更新">热更新</h2>
-<h3 id="资源热更新">资源热更新</h3>
-<p>主要通过 AB 包来实现，比较简单。</p>
-<h3 id="代码热更新">代码热更新</h3>
-<p>csharp 代码打包以后就变成了二进制，和程序同时启动，无法修改。</p>
-<p><img src="/zierc/2ebdb5f2/Untitled.png" alt></p>
-<h3 id="热更新流程">热更新流程</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled%201.png" alt></p>
-<blockquote>
-<p>MD5 值 用 md5 算法，生成资源对应的唯一标识符，有助于资源的增量打包</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%202.png" alt></p>
-</blockquote>
-<h2 id="代码热更新的手段">代码热更新的手段</h2>
-<h3 id="Lua">Lua</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled%203.png" alt></p>
-<h3 id="ILRuntime">ILRuntime</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled%204.png" alt></p>
-<h3 id="puerts">puerts</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled%205.png" alt></p>
-<h3 id="HyBridCLR-huatuo">HyBridCLR(huatuo</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled%206.png" alt></p>
-<h2 id="AB-包"><s>AB 包</s></h2>
-<h3 id="AssetsBundle-Browser"><s>AssetsBundle Browser</s></h3>
-<h3 id="AssetsBundle-Browser-的安装"><s>AssetsBundle Browser 的安装</s></h3>
-<p><s>目前 unity packagemanager 已经找不到这个插件了</s></p>
-<p><s>需要到<a href="https://github.com/Unity-Technologies/AssetBundles-Browser"><strong>github</strong></a>去下载</s></p>
-<p><s>建议使用建议使用 url 的下载方式：unity 编辑器 →Window→packmanager→Add→Url 输入 github 上的获取链接</s></p>
-<h3 id="AssetsBundle-Browser-安装问题"><s>AssetsBundle Browser 安装问题</s></h3>
-<p><s>报错：boo 找不到</s></p>
-<p><s>这个 boo Unity 很久就不用了，并且这个报错的脚本在一个叫 Tests 的文件夹中，因此大概率是 unity 团队忘了维护，或者有其他的理由，总之直接把这个 tests 文件夹删了即可。</s></p>
-<hr>
-<h2 id="不再使用-abb">不再使用 abb</h2>
-<p>突然发现 unity 官方已经不推荐使用 abb 了而是 addressables assets system（AA</p>
-<p>所以现在来研究 AA</p>
-<h2 id="AssetStudio">AssetStudio</h2>
-<p>可以对未加密的 ab 包进行逆向工程，解析出资源。</p>
-<p>但是我这里软件加载资源出问题了，无法预览，也无法导出。</p>
-<h2 id="Addressables-Assets-System"><a href="https://blog.csdn.net/linxinfa/article/details/122390621">Addressables Assets System</a></h2>
-<p>Unity 新的打包工具，支持加密（应该，<a href="http://xn--ciqxcs7mws2a.CN">之前有个.CN</a> 的加强版，现在找不到了，猜测是合并到一起了。）</p>
-<h3 id="安装">安装</h3>
-<p>直接到 package manager 里面 install 即可</p>
-<h3 id="路径命名问题">路径命名问题</h3>
-<p>使用 ab 包时，资源路径不能出现’[]’，建议使用’()’代替</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%207.png" alt></p>
-<h3 id="两种不同的打包和加载方式">两种不同的打包和加载方式</h3>
-<ol>
-<li>包体内打包与加载</li>
-<li>包体外打包与加载</li>
-</ol>
-<p>包体内我理解为打包到本地，加载则直接到本地的加载目录加载</p>
-<p>包体外我理解为打包到服务器，加载则根据给定的服务器地址，进行加载（默认为本地</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%208.png" alt></p>
-<p>包体内打包的方式，在项目构建后会被打包到游戏文件内部</p>
-<p>包体外的则会在项目的 <code>ServerData/</code> 文件中</p>
-<h3 id="打包">打包</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled%209.png" alt></p>
-<p>点击即可按照设置进行打包</p>
-<h3 id="报错">报错</h3>
-<p>log 显示，有许多 unity 内置的模块居然找不到。<s>尝试换一个编译器版本。</s></p>
-<p>尝试新建项目，发现可以用了，之前的项目出于某种原因，似乎坏掉了。</p>
-<h3 id="加载资源">加载资源</h3>
-<blockquote>
-<p>tips:InstantiateAsync 函数可以直接将获取的资源实例化</p>
-</blockquote>
-<blockquote>
-<p>资源加载时，不需要管是远程资源还是本地资源</p>
-</blockquote>
-<h4 id="加载方法">加载方法</h4>
-<ol>
-<li>通过 Addressable Name 加载</li>
-</ol>
-<blockquote>
-<p>这种加载方式不需要管是本地资源包还是远程资源包</p>
-</blockquote>
-<p>代码如下:</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2010.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2011.png" alt></p>
-<p>把这个脚本挂载到一个场景中的游戏物体即可</p>
-<ol start="2">
-<li>通过引用(AssetsReference)方式加载</li>
-</ol>
-<p>原理是通过弱引用获取资源，然后根据弱引用实例化</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2012.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2013.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2014.png" alt></p>
-<h4 id="加载途径">加载途径</h4>
-<ol>
-<li>Use AssetDatabase</li>
-</ol>
-<p>这个就是直接加载资源，不是加载 ab 包，一般开发时就用这个就行，因为快。</p>
-<ol start="2">
-<li>Simulate Group</li>
-</ol>
-<p>在不打包的情况下，模拟 AssetBundle 的操作。这个模式下，可以通过分析器，查看资源加载状况，分析加载策略</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2015.png" alt></p>
-<ol start="3">
-<li>Use Exising Build</li>
-</ol>
-<p>这个模式则是真正的加载资源包</p>
-<h3 id="加载远程资源">加载远程资源</h3>
-<p>如果要在 editor 环境下进行测试，需要搭建 web 服务器。</p>
-<p>可以使用 addressable 的 Hosting Services 工具</p>
-<p>关于报错</p>
-<p>要在 project settings/Player/Configuration 中 把 Allow download over HTTP* 选为允许。</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2016.png" alt></p>
-<h3 id="打包模式和批量加载">打包模式和批量加载</h3>
-<p>每个 Group 都可以单独设置打包模式</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2017.png" alt></p>
-<p>三种模式，分别是 全部打进一个包中，全部分开打包，按照层级打包</p>
-<p>第一个就是默认的，第二个所有资源都会单独打成一个 bundle 文件。</p>
-<p>一般选第三个，将资源的层级设置好，就可以了，而且还能方便批量加载。</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2018.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2019.png" alt></p>
-<blockquote>
-<p>一个资源可以设置多个 lable</p>
-</blockquote>
-<p>批量加载，方法如下。</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2020.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2021.png" alt></p>
-<blockquote>
-<p>注意方法名变了。 Asset 和 Assets</p>
-</blockquote>
-<p><img src="/zierc/2ebdb5f2/Untitled%2022.png" alt></p>
-<h3 id="打资源热更新包">打资源热更新包</h3>
-<p>首先，要支持热更新，需要开启 Catalog</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2023.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2024.png" alt></p>
-<p>设置好资源打包加载路径。</p>
-<p>打包</p>
-<p>可能会报错，提示端口被占用，这是因为刚刚在测试远程加载时，开启了这个端口，现在只要 reset 一下就行，这个端口会被重新打开</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2025.png" alt></p>
-<p>现在打包出来的文件中，多了两个名为 catalog 的 .hash 和 . json 文件，用于增量打包时对比哪些文件发生了变化。</p>
-<p>现在将 Group 中，一个需要替换的资源去除，然后将要替换的资源命名为相同的名字，加入到 Group 中，选择 Update a previous Build</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2026.png" alt></p>
-<p>就会多一个更新包</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2027.png" alt></p>
-<p>现在再加载，就会加载更新后的资源。</p>
-<p>如果不更新，直接选择 Update… 就不会打新的包（亲测</p>
-<h3 id="关于资源释放">关于资源释放</h3>
-<p>要通过 Addressables.Release 释放加载 handle 或者加载的结果</p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2028.png" alt></p>
-<p><img src="/zierc/2ebdb5f2/Untitled%2029.png" alt></p>
-<h2 id="问题解决">问题解决</h2>
-<blockquote>
-<p>以下是教程中没有提及的内容，如果你要参考，建议先看<a href="https://blog.csdn.net/linxinfa/article/details/122390621">教程</a></p>
-</blockquote>
-<h3 id="首先是-unity-的设置问题，在-Player-的-Config-设置中，需要允许从-http-服务器下载资源">首先是 unity 的设置问题，在 Player 的 Config 设置中，需要允许从 http 服务器下载资源</h3>
-<p><img src="/zierc/2ebdb5f2/Untitled30.png" alt></p>
-<h3 id="然后是编辑器中-Addressable-asset-settings">然后是编辑器中 Addressable asset settings</h3>
-<p>如果要实现热更新，必须开启 <code>Build remote catalog</code>功能</p>
-<p>这个选项下面的 <code>Buid&amp;Load Paths</code> 指的是远程包对应的 catalog 的构建和加载路径路径</p>
-<p><img src="/zierc/2ebdb5f2/Untitled31.png" alt></p>
-<p>在构建项目，或者打包本地资源时，会输出两个同名文件 catalog，分别时.hash 和.json 后缀的文件。</p>
-<p>勾选上述的 <code>Build Remote Catalog</code> 功能后，复制一份 catalog 作为你远程资源的目录，这份 catalog 的位置取决于你选择的路径。</p>
-<p>个人理解，这份 catalog 应该作为最新的目录，放在服务器，用于进行资源更新对比。</p>
-<p>构建游戏时，addressable 会自动打一次 local 包，同时将这些包作为游戏打包时的包内资源。</p>
-<p>也就是说，游戏根目录中 streamingassets 文件中的资源，是由编辑器中所有 local 的 addressable 资源构成（包括所有 local 分组</p>
-]]></content>
-      <categories>
-        <category>Unity技术</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-        <tag>资源热更新</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计学习笔记</title>
-    <url>/zierc/28626d28.html</url>
-    <content><![CDATA[<div class="note info simple"><p>更新中</p>
-</div>
-<h2 id="前言">前言</h2>
-<p>这个系列旨在记录笔者在学习游戏设计过程中的心得，同时能够将想法分享读者。</p>
-<h2 id="游戏剧情">游戏剧情</h2>
-<h3 id="剧情三角原则">剧情三角原则</h3>
-<p>在撰写游戏故事的时候，一般要关注三个方面，即<strong>角色</strong>、<strong>事件</strong>、<strong>世界</strong>，并且最好只侧重其中之一，否则会使得玩家感到不舒服</p>
-<h2 id="游戏文档">游戏文档</h2>
-<p>游戏文档可以针对不同的群体，也会因此导致其侧重点不同<br>
-比如你写给开发人员，那么文档就会注重一些玩法细节，如果是写给发行商负责人，那么可能就要多填充一些能激起他们兴趣的概念图，以及一些吸引人的游戏玩法<br>
-游戏文档的目的是为了沟通，这就揭示了编写游戏文档的原则—<strong>可读性</strong>。</p>
-<h3 id="单页说明">单页说明</h3>
-<ul>
-<li>游戏名</li>
-<li>游戏系统</li>
-<li>目标玩家年龄</li>
-<li>ESRB 分级
-<ul>
-<li>eC 幼儿</li>
-<li>e 所有人</li>
-<li>e10 10 岁以上的所有人</li>
-<li>t 青少年 含有少量暴力 暗示性主题及脏话</li>
-<li>m 17 岁以上 含有明显的暴力，血腥，暗示性主题</li>
-<li>AO 18 岁以上 含有明显暴力，血腥，暗示性主题并含有明显的性和裸露场景</li>
-</ul>
-</li>
-</ul>
-<h3 id="十页说明">十页说明</h3>
-<h3 id="游戏流程">游戏流程</h3>
-<h3 id="游戏设计文档">游戏设计文档</h3>
-<h2 id="参考文献">参考文献:</h2>
-<ul>
-<li>《通关！游戏设计之道》</li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏设计</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-        <tag>设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏代码设计模式学习路线与思路</title>
-    <url>/zierc/a2617f52.html</url>
-    <content><![CDATA[<div class="note info simple"><p>更新中</p>
-</div>
-<h2 id="学习设计模式之前">学习设计模式之前</h2>
-<p>先学习软件开发的基本原则，虽说笔者主攻方向为基于 Unity 引擎的游戏开发，但是游戏开发与软件开发有许多共通处，掌握学习游戏设计模式可以为后续开发与工具的学习运用打下坚实的基础</p>
-<h3 id="软件设计的原则">软件设计的原则</h3>
-<ul>
-<li>单一职责原则（SRP）</li>
-<li>开闭原则（OCP）</li>
-<li>里氏替换原则（LSP）</li>
-<li>依赖倒置原则（DIP）</li>
-<li>接口隔离原则（ISP）</li>
-<li>迪米特法则（LOD）</li>
-<li>合成/聚合复用原则（CARP）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-        <tag>设计</tag>
       </tags>
   </entry>
   <entry>
