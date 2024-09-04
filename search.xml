@@ -339,7 +339,6 @@
 <li>迪米特法则（LOD）</li>
 <li>合成/聚合复用原则（CARP）</li>
 </ul>
-<h3 id="本地部署测试">本地部署测试</h3>
 ]]></content>
       <categories>
         <category>设计模式</category>
