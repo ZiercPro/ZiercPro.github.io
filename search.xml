@@ -277,6 +277,52 @@
       </tags>
   </entry>
   <entry>
+    <title>游戏设计学习笔记</title>
+    <url>/zierc/28626d28.html</url>
+    <content><![CDATA[<div class="note info simple"><p>更新中</p>
+</div>
+<h2 id="前言">前言</h2>
+<p>这个系列旨在记录笔者在学习游戏设计过程中的心得，同时能够将想法分享读者。</p>
+<h2 id="游戏剧情">游戏剧情</h2>
+<h3 id="剧情三角原则">剧情三角原则</h3>
+<p>在撰写游戏故事的时候，一般要关注三个方面，即<strong>角色</strong>、<strong>事件</strong>、<strong>世界</strong>，并且最好只侧重其中之一，否则会使得玩家感到不舒服</p>
+<h2 id="游戏文档">游戏文档</h2>
+<p>游戏文档可以针对不同的群体，也会因此导致其侧重点不同<br>
+比如你写给开发人员，那么文档就会注重一些玩法细节，如果是写给发行商负责人，那么可能就要多填充一些能激起他们兴趣的概念图，以及一些吸引人的游戏玩法<br>
+游戏文档的目的是为了沟通，这就揭示了编写游戏文档的原则—<strong>可读性</strong>。</p>
+<h3 id="单页说明">单页说明</h3>
+<ul>
+<li>游戏名</li>
+<li>游戏系统</li>
+<li>目标玩家年龄</li>
+<li>ESRB 分级
+<ul>
+<li>eC 幼儿</li>
+<li>e 所有人</li>
+<li>e10 10 岁以上的所有人</li>
+<li>t 青少年 含有少量暴力 暗示性主题及脏话</li>
+<li>m 17 岁以上 含有明显的暴力，血腥，暗示性主题</li>
+<li>AO 18 岁以上 含有明显暴力，血腥，暗示性主题并含有明显的性和裸露场景</li>
+</ul>
+</li>
+</ul>
+<h3 id="十页说明">十页说明</h3>
+<h3 id="游戏流程">游戏流程</h3>
+<h3 id="游戏设计文档">游戏设计文档</h3>
+<h2 id="参考文献">参考文献:</h2>
+<ul>
+<li>《通关！游戏设计之道》</li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏设计</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+        <tag>设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>八股文之排序算法</title>
     <url>/zierc/14ace8e0.html</url>
     <content><![CDATA[<div class="note info simple"><p>更新中</p>
@@ -524,52 +570,6 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏设计学习笔记</title>
-    <url>/zierc/28626d28.html</url>
-    <content><![CDATA[<div class="note info simple"><p>更新中</p>
-</div>
-<h2 id="前言">前言</h2>
-<p>这个系列旨在记录笔者在学习游戏设计过程中的心得，同时能够将想法分享读者。</p>
-<h2 id="游戏剧情">游戏剧情</h2>
-<h3 id="剧情三角原则">剧情三角原则</h3>
-<p>在撰写游戏故事的时候，一般要关注三个方面，即<strong>角色</strong>、<strong>事件</strong>、<strong>世界</strong>，并且只能侧重其中之一，否则会使得玩家感到不舒服</p>
-<h2 id="游戏文档">游戏文档</h2>
-<p>游戏文档可以针对不同的群体，也会因此导致其侧重点不同<br>
-比如你写给开发人员，那么文档就会注重一些玩法细节，如果是写给发行商负责人，那么可能就要多填充一些能激起他们兴趣的概念图，以及一些吸引人的游戏玩法<br>
-游戏文档的目的是为了沟通，这就揭示了编写游戏文档的原则—<strong>可读性</strong>。</p>
-<h3 id="单页说明">单页说明</h3>
-<ul>
-<li>游戏名</li>
-<li>游戏系统</li>
-<li>目标玩家年龄</li>
-<li>ESRB 分级
-<ul>
-<li>eC 幼儿</li>
-<li>e 所有人</li>
-<li>e10 10 岁以上的所有人</li>
-<li>t 青少年 含有少量暴力 暗示性主题及脏话</li>
-<li>m 17 岁以上 含有明显的暴力，血腥，暗示性主题</li>
-<li>AO 18 岁以上 含有明显暴力，血腥，暗示性主题并含有明显的性和裸露场景</li>
-</ul>
-</li>
-</ul>
-<h3 id="十页说明">十页说明</h3>
-<h3 id="游戏流程">游戏流程</h3>
-<h3 id="游戏设计文档">游戏设计文档</h3>
-<h2 id="参考文献">参考文献:</h2>
-<ul>
-<li>《通关！游戏设计之道》</li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏设计</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-        <tag>设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏代码设计模式学习路线与思路</title>
     <url>/zierc/a2617f52.html</url>
     <content><![CDATA[<div class="note info simple"><p>更新中</p>
@@ -601,6 +601,11 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>有幸相遇</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
@@ -629,11 +634,6 @@
   
 </div>
 ]]></content>
-  </entry>
-  <entry>
-    <title>有幸相遇</title>
-    <url>/link/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>个人画廊</title>
