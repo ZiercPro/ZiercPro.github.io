@@ -103,8 +103,8 @@
         <category>前端</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
+        <tag>网站</tag>
       </tags>
   </entry>
   <entry>
@@ -273,7 +273,7 @@
       </categories>
       <tags>
         <tag>Unity</tag>
-        <tag>资源热更新</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -315,7 +315,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>游戏设计</category>
+        <category>设计</category>
       </categories>
       <tags>
         <tag>游戏</tag>
@@ -341,11 +341,11 @@
 </ul>
 ]]></content>
       <categories>
-        <category>设计模式</category>
+        <category>设计</category>
       </categories>
       <tags>
-        <tag>游戏</tag>
         <tag>设计</tag>
+        <tag>开发</tag>
       </tags>
   </entry>
   <entry>
@@ -624,6 +624,13 @@ addressable一个资源可以有多个标签，所以可以限制加载的资源
 <p>需要一个类对Addressable的方法进行封装，并对资源进行批量管理。而细致的资源管理则交给addressable，因为对于已经加载的资源addressable是不会再次去磁盘加载的。<br>
 这种方式还需要严格规范名称的使用。个人之前是比较反感使用string作为参数的，因为容易出错，但是很多情况下，string的灵活性好，而且做好规范，可以尽量避免错误。</p>
 ]]></content>
+      <categories>
+        <category>Unity技术</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>插件</tag>
+      </tags>
   </entry>
   <entry>
     <title>关于</title>
