@@ -639,11 +639,36 @@ addressable一个资源可以有多个标签，所以可以限制加载的资源
 <li><a href="#%E5%90%88%E6%88%90%E8%81%9A%E5%90%88%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99carp">合成/聚合复用原则（CARP）</a></li>
 </ul>
 <h3 id="开闭原则（OCP）">开闭原则（OCP）</h3>
+<p>软件设计的基本原则，后续六个原则的最终目的都是为了满足开闭原则<br>
+解释：对扩展开放，对修改封闭。就是说编写软件框架时，要多扩展，少修改。<br>
+实现的例子：面向接口编程<br>
+比如有限状态机（状态模式的最常见的实现）的实现，对于状态，我们一般都是先定义状态接口</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface IState&#123;</span><br><span class="line">  void Enter();</span><br><span class="line"></span><br><span class="line">  void Update();</span><br><span class="line"></span><br><span class="line">  void Exit();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后再编写的状态管理器<code>StateManager</code>，后续的状态机使用只需要实现状态接口并创建状体管理器实例，就可以正确运行。</p>
+<p>优点：提高代码健壮性，易维护和扩展<br>
+缺点：往往会增加代码量和阅读难度</p>
+<hr>
 <h3 id="单一职责原则（SRP）">单一职责原则（SRP）</h3>
+<p>解释：每个类或者方法只负责干一件或一类事情，不要节外生枝负责过多的事务。<br>
+实现的例子：并不固定，更多的是一种思想，比如Unity中游戏实体的移动，可能会创建一个<code>MoveComponent</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class MoveComponent : MonoBehavear &#123;</span><br><span class="line"></span><br><span class="line">   //references</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  private float _speed</span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  public void Move(Vector2 moveDir)&#123;&#125;</span><br><span class="line"></span><br><span class="line">  public void Stop()&#123;&#125;</span><br><span class="line"></span><br><span class="line">  public void SetSpeed()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需要移动功能时，直接获取该组件，调用方法。如果移动逻辑出现问题，只需要修改该组件的代码。</p>
+<p>优点：高内聚，逻辑独立，便于维护<br>
+缺点：增加代码量；可能导致功能颗粒度太小，增加使用复杂度。</p>
+<hr>
 <h3 id="里氏替换原则（LSP）">里氏替换原则（LSP）</h3>
+<div class="note info warning flat"><p>未完善</p>
+</div>
+<p>解释：是对于继承的使用规范，要求我们使用继承时，对于父类的方法尽量不要修改而是采用扩展新的方法来达到扩展功能的目的，如果实在要修改，也要满足<strong>输入范围大于等于父类，输出范围小于等于父类</strong>，什么意思呢，简单讲就是要你修改了父类方法时，之前对于该方法的使用依然是正确的。<br>
+实现：这里主要是展示一下如何遵守规范，加深对解释的理解</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//父类方法</span><br><span class="line">public float XXX(int a)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//子类方法-不合理修改</span><br><span class="line">public override </span><br></pre></td></tr></table></figure>
+<hr>
 <h3 id="依赖倒置原则（DIP）">依赖倒置原则（DIP）</h3>
+<hr>
 <h3 id="接口隔离原则（ISP）">接口隔离原则（ISP）</h3>
+<hr>
 <h3 id="迪米特法则（LOD）">迪米特法则（LOD）</h3>
+<hr>
 <h3 id="合成-聚合复用原则（CARP）">合成/聚合复用原则（CARP）</h3>
 ]]></content>
       <categories>
