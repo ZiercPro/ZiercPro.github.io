@@ -662,8 +662,9 @@ addressable一个资源可以有多个标签，所以可以限制加载的资源
 实现：这里主要是展示一下如何遵守规范。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//鸟类基类</span><br><span class="line">public class Bird&#123;</span><br><span class="line">  void Fly()&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//错误继承</span><br><span class="line">public class Ostrich : Bird&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//正确继承</span><br><span class="line">public class Yanzi : Bird&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在上面的例子中，对于<code>Fly</code>方法，鸵鸟由于不能飞，对于飞行的实现，就只能采取空实现或者其他不符合飞行行为的实现，此时当外部使用者使用该实现类时，使用该方法得到的结果可能就是错误的。当然这种例子很单薄，我们都知道鸵鸟不可以飞。</p>
-<h2 id="优点：实现开闭原则；有利于增加系统的健壮性缺点：有时需要针对需求判断继承是否合理">优点：实现开闭原则；有利于增加系统的健壮性<br>
-缺点：有时需要针对需求判断继承是否合理</h2>
+<p>优点：实现开闭原则；有利于增加系统的健壮性<br>
+缺点：有时需要针对需求判断继承是否合理</p>
+<hr>
 <h3 id="依赖倒置原则（DIP）">依赖倒置原则（DIP）</h3>
 <hr>
 <h3 id="接口隔离原则（ISP）">接口隔离原则（ISP）</h3>
