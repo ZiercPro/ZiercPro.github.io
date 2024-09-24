@@ -657,12 +657,13 @@ addressable一个资源可以有多个标签，所以可以限制加载的资源
 缺点：增加代码量；可能导致功能颗粒度太小，增加使用复杂度。</p>
 <hr>
 <h3 id="里氏替换原则（LSP）">里氏替换原则（LSP）</h3>
-<div class="note info warning flat"><p>未完善</p>
-</div>
-<p>解释：是对于继承的使用规范，要求我们使用继承时，对于父类的方法尽量不要修改而是采用扩展新的方法来达到扩展功能的目的，如果实在要修改，也要满足<strong>输入范围大于等于父类，输出范围小于等于父类</strong>，什么意思呢，简单讲就是要你修改了父类方法时，之前对于该方法的使用依然是正确的。<br>
-实现：这里主要是展示一下如何遵守规范，加深对解释的理解</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//父类方法</span><br><span class="line">public float XXX(int a)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//子类方法-不合理修改</span><br><span class="line">public override </span><br></pre></td></tr></table></figure>
-<hr>
+<p>解释：是对于继承的使用规范，要求我们使用继承时，对于父类的方法尽量不要修改而是采用扩展新的方法来达到扩展功能的目的。<br>
+继承设计的目的是提取类中相同的部分，构成父类，这种统一性其实指的是<strong>行为的一致性</strong>，也就是说继承可以在多个类中包含相同行为时，为了简化使用，编写通用代码的目的而使用。而行为的一致性又取决于项目需求。实际使用时要灵活变通。<br>
+实现：这里主要是展示一下如何遵守规范。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//鸟类基类</span><br><span class="line">public class Bird&#123;</span><br><span class="line">  void Fly()&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//错误继承</span><br><span class="line">public class Ostrich : Bird&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//正确继承</span><br><span class="line">public class Yanzi : Bird&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上面的例子中，对于<code>Fly</code>方法，鸵鸟由于不能飞，对于飞行的实现，就只能采取空实现或者其他不符合飞行行为的实现，此时当外部使用者使用该实现类时，使用该方法得到的结果可能就是错误的。当然这种例子很单薄，我们都知道鸵鸟不可以飞。</p>
+<h2 id="优点：实现开闭原则；有利于增加系统的健壮性缺点：有时需要针对需求判断继承是否合理">优点：实现开闭原则；有利于增加系统的健壮性<br>
+缺点：有时需要针对需求判断继承是否合理</h2>
 <h3 id="依赖倒置原则（DIP）">依赖倒置原则（DIP）</h3>
 <hr>
 <h3 id="接口隔离原则（ISP）">接口隔离原则（ISP）</h3>
