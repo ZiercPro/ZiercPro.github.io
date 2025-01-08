@@ -170,6 +170,178 @@
       </tags>
   </entry>
   <entry>
+    <title>北境实习感受</title>
+    <url>/zierc/768705be.html</url>
+    <content><![CDATA[<h3 id="目的">目的</h3>
+<p>北境实习一段时间之后，感觉可以对这段时间进行一下记录和总结。主要原因还是这段经历的收获目前看来没有达到预期，简单回顾一下，方便规划之后的路线。</p>
+<h3 id="回顾">回顾</h3>
+<p>时间线如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--- 2024 11.5 线下面试</span><br><span class="line">       | 11.7 电话通知录取</span><br><span class="line">       | 11.11 实习offer通知</span><br><span class="line">       | 11.25 入职</span><br><span class="line">    2025 1.8 写下这篇日志</span><br></pre></td></tr></table></figure>
+<h3 id="‘前戏’">‘前戏’</h3>
+<p>面试的时候，感觉回答的一般，面试官（后来知道是主程）最后说的是，因为我学的是unity但是他们现在是用虚幻，所以需要看其他组还缺不缺人…当时一听这个感觉就寄掉了<br>
+本来的规划是，大三先去小厂实习，所以当时以为会变成“计划赶不上变化”。</p>
+<hr>
+<p>之后心存侥幸（好像确实是侥幸上了），希望面试官说的不是客套话（这个到现在也不好说…实在是不好说，是不是啊，是不是呢？）。就这样焦急的，一边摆烂一边等。为什么当时没有准备其他实习呢？并非没有，首先因为大学课程，需要实习地点不能离学校太远，其次公司水平不能太差，同时还要是一家游戏公司，这样筛选下来，只剩下这一家符合要求了。<br>
+那两天真是一天比一天难受，时间越长，希望越是渺茫。每次听到电话声心里都会有点波澜，想着会不会是实习录取通知。然而大多都是我点的外卖 &lt; : 。<br>
+直到11月7日这天，hr终于打电话通知。我当时情绪有点过于高昂了，以至于hr都察觉到了。<br>
+之后事件：11号收到offer邮箱+基本的注册流程+25号正式入职。</p>
+<h3 id="‘正片’">‘正片’</h3>
+<p>那么在1月8日的今天，工作一个半月之后，我的感受如何呢（苦笑）<br>
+well well well<br>
+只能说，<s>之前的我高兴的太早了</s>，之前的我对于实习的收益期望过高了。<br>
+先说一下目前为止我接触到的工作内容：</p>
+<ul>
+<li>崩溃跟进</li>
+<li>UC编译warning清理</li>
+<li>bug分析（接触的很少）</li>
+</ul>
+<p>嗯…我很疑惑，因为在刚进来时，主程说过我之后的工作内容安排，就是在简单熟悉了项目结构之后（说是大概一个月之后），负责渲染优化的部分，说是是我简历上主要是渲染的部分，玩法上似乎有些薄弱（…游戏玩法上虽然没什么亮点，但也不算是一点都讲不了）。然而到现在为止，我没有接触到关于渲染优化的任何内容…<br>
+我咨询过在这工作了几年的正式工，得到的答案是他刚来就已经负责游戏玩法了，而和我一样刚来一段时间的实习生，则说的是：刚开始也是看崩溃，但是看不懂，就去实现道具了…甚至还被夸了，认为我能看崩溃挺牛的…<br>
+所以到底是因为我崩溃干的还不错，所以主程打算继续让我干，还是我这段时间的表现，没有达到他的预期（2025年1月之前我一边实习还一边要准备大学的期末考试和线下实验，请假有点多，上班也会花点时间…），他认为我还不够熟悉项目结构，无法胜任渲染优化的工作…又或者只是他单纯忘了？<br>
+既然是要学习进步，只能当作是第二种情况了。<br>
+再说说这里的人吧，虽然前面看上去好像我有些“不满”，但是其实除了认为刚接到实习offer的时候没必要那么兴奋之外，我对这也没什么意见，当然也没这资格，哈哈哈。首先这边的工作氛围还是很不错的，没有那种死气沉沉的或者是窒息感觉，和同事不是很熟，但是相互之间表现得都很友好，尤其是我的导师，看着就是那种<s>容易被欺负</s>亚萨西的类型，而且也没有明显的上下级区分（这点我刚来很不适应），我甚至直接叫我主程名字，要知道他看着至少比我大了10多岁。<br>
+再说一下一个让我印象深刻的事情，那就是进来一段时间时候，实习生突然开了个会，会议上本来是要来5个左右的前辈，结果就来了总负责人，当时下个版本马上发布了，其他的前辈可能还在一线奋斗，没时间来，很遗憾。而总负责人张（后简称张）因为资历比较深，对各个部门的同学都进行了指点，包括程序，策划，后台等等，因为张自己当初是程序出身，所以只有程序介绍的比较深入（程序优势get），其他的可以说都是一些方法论类型的指导。记得最清楚的一句话就是：你们基本都是大学生，是进来学习的，应该以自己的成长为主，不要想着公司利益…可能只是张的某种激励式话术，但是说实话听了还是很有感触的，可能我还没被洗脑过，哈哈哈。总之，既然他都这么说了，我就恭敬不如从命了。<br>
+回顾下来，果然自己也有很多问题，所以接下来就是最重要的，总结反思环节了！</p>
+<h3 id="总结与反思">总结与反思</h3>
+<p>先看看这一个多月的收获，除了拿了两次工资（第一次因为入职时间问题，只有…3.29元！你没看错，这是现实中真实发生的事情）,基本上直到两天之前，我都可以说是在原地踏步，没有任何成长，总结下来有这些原因：</p>
+<ul>
+<li>因为找到了实习，想休息了，以为只要做好实习时的工作就能带来巨大的进步</li>
+<li>本来就在摆烂，对人生的心态出现问题，在实习之前进步就已经很慢，这种进步缓慢的状态可以追溯到24年6月份（当时确实是因为运不好，发生了很折磨人的事情，导致两个月笔记本都不在身边，基本什么都干不了…）（主要原因）</li>
+<li>前一个月因为学校的破考试周，浪费了很多时间和心情（第二大原因）</li>
+<li>玩游戏（主要是塔克夫，<s>byd尼基塔，做的垃圾游戏这么容易上瘾</s>）上瘾了</li>
+<li>因为摆烂和玩游戏浪费时间，导致真的需要时间的时候需要从休息时间中扣，这段时间的精神状态和生理状态都不行（上周末更是起床喷鼻血，当然不是什么绝症，就是过敏性鼻炎，纯折磨&gt; &lt;）</li>
+<li>没有像现在这样主动的去分析解决问题，这个可以算是摆烂影响的一部分</li>
+<li>因为自己一个人住，没有什么约束自己的，本来自律能力就差…这个影响力会跟着心境变化</li>
+</ul>
+<p>既然现在找到了原因，解决方案自然也要跟着蹦出来了：</p>
+<ul>
+<li>重中之重，保护自己的身体！！！在上周末喷完鼻血，痛失600大洋之后，真的一下子清醒了，哈哈哈，果然还是这招最有效，哎真是可悲啊…所以现在必须保证最晚也得在1点之前躺在床上，最好能在12：30之前躺好。然后早晚各泡一杯奶，早上出门之前吃个麦片。</li>
+<li>在保证自己身体状态良好的前提下，每天都去学习研究一点东西，近期主要可以去看看虚幻的架构和基础，最好能了解一些原理上的知识，而不是只知道怎么用。</li>
+<li>每天留一点时间给回忆</li>
+<li>每天晚上留时间给自己的爱好：画画（目前是大概1个多小时）</li>
+<li>每天晚上留时间给自己玩游戏</li>
+<li>工作方面，在完成了基本的工作内容之后，多花时间看看公司文档和项目，然后就是研究虚幻中渲染和unity的区别了，朋友说虚幻写ComputeShader无从下手。</li>
+<li>寻找努力生活的意义，并努力生活（笼统了，可以从音乐，视频和绘画中寻找）</li>
+</ul>
+<p>人是没有前瞻性的，至少沉默的大多数是没有的，总是要发生点什么，切身经历了，才能调动内在的积极性去执行正确之事，亡羊补牢，为时已晚…为时不晚。我总要为自己的不作为买单，只要我还活着。</p>
+<h3 id="‘劲爆尾杀’">‘劲爆尾杀’</h3>
+<p>md，认真写一篇文章真的很花时间，本来今天还有技术研究的安排的，看来是没时间了。</p>
+]]></content>
+      <categories>
+        <category>个人日志</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+github静态托管搭建个人博客</title>
+    <url>/zierc/2443647d.html</url>
+    <content><![CDATA[<h2 id="网站搭建和主题配置">网站搭建和主题配置</h2>
+<h3 id="请先看文章-小茗同学大佬的搭建教程">请先看文章:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学大佬的搭建教程</a></h3>
+<h3 id="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）">由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）</h3>
+<ul>
+<li>关于<code>_config.yml</code>中<code>deploy</code>的<code>branch</code>的配置，<code>master</code>要更换为<code>main</code></li>
+<li>关于 url 配置，文章中没有提到，但是笔者在搭建时发现，<strong>url 对大小写要求很严格</strong>，如果你的 github 域名没有完全正确的填写，那么网站的样式是加载不出来的</li>
+<li>CNAME 必须移到<code>source</code>文件夹中进行保留</li>
+</ul>
+<h2 id="链接永久化">链接永久化</h2>
+<div class="note simple"><p>减少网页链接丢失，同时减少 url 的层级，对爬虫比较友好</p>
+</div>
+<h3 id="如何实现">如何实现</h3>
+<p>下载插件<code>hexo-abbrlink</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>在根目录中的<code>_conflg.yml</code>中配置生成链接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: zierc/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32 # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex</span><br></pre></td></tr></table></figure>
+<div class="note warning simple"><p>注意：上述代码中<code>zierc</code>为自定义内容，你想咋填咋填，但是会影响到关于<strong>图片位置生成的操作（hexo-asset-image 插件）</strong></p>
+</div>
+<p>由于<code>_config.yml</code>已经设置了 permalink， 这里重复设置，此时构建会报错，所以需要<strong>如下图</strong>一样注释一些默认的代码<br>
+<img src="/zierc/2443647d/Snipaste_2024-04-12_09-48-39.png" alt></p>
+<h3 id="如果你使用了hexo-asset-image">如果你使用了<code>hexo-asset-image</code></h3>
+<p>由于 image 的路径设置是根据 hexo 框架原来的路径走的，所以此时你会发现构建出的网站，图片无法加载<br>
+此时需要修改一下源码<br>
+找到目录<code>node_modules\hexo-asset-image\index.js</code></p>
+<ul>
+<li>在大概第 12 行左右<code>var link = data.permalink;</code>后面添加如下代码，用于定义变量 abbrlink，当然，具体添加到哪里看你自己的喜好，笔者只是为了逻辑清晰</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var abbrlink = data.abbrlink;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后在大概第 58 行左右，将代码<code>$(this).attr('src', config.root + link + src);</code>修改为<code> $(this).attr('src', config.root +'zierc/' +abbrlink +'/'+ src);</code><div class="note warning simple"><p>注意：此处回应前面的提示，修改之后的代码中<code>zierc</code>为自定义内容，你之前填的什么，现在就修改成什么</p>
+</div>
+</li>
+</ul>
+<p>之后为了防止一些奇怪的问题，直接 hexo 三件套就可以了</p>
+<h2 id="双线部署">双线部署</h2>
+<p>由于 github 部署访问太慢了<br>
+所以添加一个国内的 coding 部署，提高访问速度</p>
+<h3 id="如何实现-2">如何实现</h3>
+<p>首先，请详细观看<a href="https://blog.juanertu.com">卷二兔</a>大佬的<a href="https://www.bilibili.com/video/BV1hF411v7e1/?vd_source=27f2b246cedeb85170372b3386cefa14">b 站视频教程</a>本文的实现主要是参考了这位大佬。当你观看视频时，可能会发现一些场景和视频中不同，这就是笔者在此的作用了</p>
+<h4 id="deploy-配置">deploy 配置</h4>
+<p><code>_config.yml</code>配置和视频中所示不同，经过笔者尝试，如果按照视频的格式配置，会出现腾讯云和 GitHub 都不会自动部署的问题，经过查看 hexo 的文档和各种资料，笔者得到以下成功的配置方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: &quot;git&quot;</span><br><span class="line">    repository: git@github.com:ZiercPro/ZiercPro.github.io.git</span><br><span class="line">    branch: main</span><br><span class="line">  - type: &quot;git&quot;</span><br><span class="line">    repository: coding仓库地址</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p>如果这个也无法帮助到你，那可能需要你移步了，对此笔者感到非常抱歉。</p>
+<div class="note warning simple"><p>如果你发现该视频的方法不行，可以尝试另一位大佬的方法（笔者嫌麻烦没有尝试，但是这已经是笔者能找到的最新的方法了）<a href="https://www.cnblogs.com/Chen0495/p/17947479">文档链接-&gt;</a></p>
+</div>
+<h2 id="针对主题ButterFly遇到的问题">针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2>
+<h3 id="主题不显示">主题不显示</h3>
+<p>在切换主题之后，主题不显示，只显示一行文本：<br>
+<code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>
+解决方案为：在根目录中执行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+<p>然后重新构建，并在本地测试即可<br>
+如果还有什么问题请先运行<code>hexo clean</code> 之后再重新运行<code>hexo g</code></p>
+<h3 id="设置背景图片">设置背景图片</h3>
+<p>由于笔者没有仔细看 <code>_config.yml</code> 的选项，导致设置背景图片一直在网上寻找陈年方法，都没有效果，浪费了很多时间（4 小时）还没成功，后经过官方大佬点拨发现在<code>_config.yml</code>偏后半段，有<code>background</code>进行背景图片设置，如下图：<br>
+<img src="/zierc/2443647d/Snipaste_2024-04-10_21-14-27.png" alt></p>
+<div class="note simple"><p>因为 background 设置在比较后面，我并没有在官方文档中找到，所以不知道官方文档中有没有（肯定是有的），现身说法，望诸位不要像我一样犯傻</p>
+</div>
+<p>另附一张与官方大佬&quot;<strong>斗智斗勇</strong>&quot;的精彩画面。<s>望周知</s><br>
+<img src="/zierc/2443647d/image.png" alt="我是傻逼"></p>
+<h3 id="个性化鼠标指针样式">个性化鼠标指针样式</h3>
+<p><a href>该鼠标样式原创博客</a></p>
+<p>笔者不了解前端，只是自己加了个渐变色，这里直接给出自己的代码，不多做说明</p>
+<div class="note default simple"><p>JS 代码</p>
+</div>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="variable constant_">CURSOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Math</span>.<span class="property">lerp</span> = <span class="function">(<span class="params">a, b, n</span>) =&gt;</span> (<span class="number">1</span> - n) * a + n * b;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getStyle</span> = (<span class="params">el, attr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">window</span>.<span class="property">getComputedStyle</span></span><br><span class="line">      ? <span class="variable language_">window</span>.<span class="title function_">getComputedStyle</span>(el)[attr]</span><br><span class="line">      : el.<span class="property">currentStyle</span>[attr];</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cursor</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pos</span> = &#123; <span class="attr">curr</span>: <span class="literal">null</span>, <span class="attr">prev</span>: <span class="literal">null</span> &#125;;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pt</span> = [];</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">create</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">init</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">move</span>(<span class="params">left, top</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">style</span>[<span class="string">&quot;left&quot;</span>] = <span class="string">`<span class="subst">$&#123;left&#125;</span>px`</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">style</span>[<span class="string">&quot;top&quot;</span>] = <span class="string">`<span class="subst">$&#123;top&#125;</span>px`</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">create</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">cursor</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span> = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">id</span> = <span class="string">&quot;cursor&quot;</span>;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">append</span>(<span class="variable language_">this</span>.<span class="property">cursor</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; el.<span class="property">length</span>; i++)</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">getStyle</span>(el[i], <span class="string">&quot;cursor&quot;</span>) == <span class="string">&quot;pointer&quot;</span>) <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">push</span>(el[i].<span class="property">outerHTML</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>((<span class="variable language_">this</span>.<span class="property">scr</span> = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;style&quot;</span>)));</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">scr</span>.<span class="property">innerHTML</span> = <span class="string">`* &#123;cursor: url(&quot;data:image/svg+xml,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 10 10&#x27; width=&#x27;12px&#x27; height=&#x27;12px&#x27;&gt;&lt;circle cx=&#x27;3&#x27; cy=&#x27;3&#x27; r=&#x27;6&#x27; opacity=&#x27;.3&#x27;/&gt;&lt;/svg&gt;&quot;) 1 1, auto&#125;`</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">refresh</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">scr</span>.<span class="title function_">remove</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pos</span> = &#123; <span class="attr">curr</span>: <span class="literal">null</span>, <span class="attr">prev</span>: <span class="literal">null</span> &#125;;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pt</span> = [];</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">create</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">init</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">init</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseover</span> = <span class="function">(<span class="params">e</span>) =&gt;</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">includes</span>(e.<span class="property">target</span>.<span class="property">outerHTML</span>) &amp;&amp;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseout</span> = <span class="function">(<span class="params">e</span>) =&gt;</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">includes</span>(e.<span class="property">target</span>.<span class="property">outerHTML</span>) &amp;&amp;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmousemove</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span> == <span class="literal">null</span> &amp;&amp; <span class="variable language_">this</span>.<span class="title function_">move</span>(e.<span class="property">clientX</span> - <span class="number">8</span>, e.<span class="property">clientY</span> - <span class="number">8</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span> = &#123; <span class="attr">x</span>: e.<span class="property">clientX</span> - <span class="number">8</span>, <span class="attr">y</span>: e.<span class="property">clientY</span> - <span class="number">8</span> &#125;;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseenter</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseleave</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmousedown</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseup</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span> = <span class="title class_">Math</span>.<span class="title function_">lerp</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>.<span class="property">x</span>, <span class="number">0.15</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span> = <span class="title class_">Math</span>.<span class="title function_">lerp</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>.<span class="property">y</span>, <span class="number">0.15</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">move</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span> = <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">requestAnimationFrame</span>(<span class="function">() =&gt;</span> <span class="variable language_">this</span>.<span class="title function_">render</span>());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable constant_">CURSOR</span> = <span class="keyword">new</span> <span class="title class_">Cursor</span>();</span><br><span class="line">  <span class="comment">// 需要重新获取列表时，使用 CURSOR.refresh()</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="note default simple"><p>css 代码</p>
+</div>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#cursor</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#927aff</span>, <span class="number">#e22c72</span>, <span class="number">#4d20ee</span>, <span class="number">#42ff29</span>);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">  <span class="attribute">animation</span>: gradientBG <span class="number">8s</span> ease infinite;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">12px</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.45</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">10086</span>;</span><br><span class="line">  <span class="attribute">pointer-events</span>: none;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">0.2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">transition-property</span>: background, opacity, transform;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> gradientBG &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0%</span> <span class="number">50%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">50%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0%</span> <span class="number">50%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#cursor</span><span class="selector-class">.hidden</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#cursor</span><span class="selector-class">.hover</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.35</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#cursor</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.7</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.75</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning simple"><p>但是这个鼠标样式还有个小问题，那就是鼠标如果在复制代码的按钮上时，会变回原指针</p>
+</div>
+<h4 id="暂无解决方案">暂无解决方案</h4>
+<p>按照原作者的意思，应该会检测元素中是否有<code>cursor:pointer</code> 于是笔者通过浏览器控制台，发现 copy 代码的按钮类名为<code>fas fa-paste copy-button</code><br>
+于是笔者又去查看源码，发现在<code>highlight.styl</code>文件中，关于<code>copy-button</code>代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.copy-button</span><br><span class="line">  position: absolute</span><br><span class="line">  right: 14px</span><br><span class="line">  cursor: pointer</span><br><span class="line">  transition: color .2s</span><br><span class="line"></span><br><span class="line">  &amp;:hover</span><br><span class="line">    color: $theme-color</span><br></pre></td></tr></table></figure>
+<p>这让笔者一脸懵逼，理论上来说应该能检测到<code>cursor:pointer</code>的啊<br>
+但是这些代码到底是什么意思，笔者也不知道，希望能有大佬来解决吧</p>
+<div class="note info simple"><p>提一嘴，笔者专门去其他人的博客中对比了，似乎这个问题并不针对这款鼠标样式，其他鼠标样式修改方法，同样检测不到 copy 按钮，会恢复原鼠标样式</p>
+</div>
+<h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码">想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3>
+<h2 id="使用gitalk设置评论模块">使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h2>
+<p>先找到 <a href="https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96">butterfly 文档</a>中的<code>评论</code>，它会让你跟随<a href="https://github.com/gitalk/gitalk">gitalk</a>的教程，内容简单易懂</p>
+<h3 id="关于配置，笔者来帮忙避坑">关于配置，笔者来帮忙避坑</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写到引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
+<h2 id="笔者的吐槽">笔者的吐槽</h2>
+<p>笔者搭建过程中，一大感触就是，怎么感觉他们的过程和我的有点不一样，似乎很多文章都有点过时了。尽管最后，这些文章大概率依旧能够帮到笔者，但是总是会让笔者陷入混乱：这里到底该这样还是那样，为什么呢。当然，这个问题和有些<strong>平台或工具更新过快</strong>也脱不了关系。<br>
+所以笔者也在在本文顶部预先提醒读者，注意本文的时效性，可能一小段时间后，这篇文章就已经不能食用了，如果你发现这篇文章已经是数年前的古董，那还是找一篇更新的教程来看吧</p>
+<h2 id="结语">结语</h2>
+<p>这是笔者第一篇文章，诸多问题，不用谅解，直接来找我私聊即可（<br>
+如果有什么问题，可以发表评论或者通过各种渠道找我</p>
+<p>参考文献：<br>
+<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗大佬 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br>
+<a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示问题 https://www.jianshu.com/p/aa936a8369fb</a><br>
+<a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a><br>
+<a href="https://blog.juanertu.com">卷二兔大佬 https://blog.juanertu.com</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>网站</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>八股文之排序算法</title>
     <url>/zierc/14ace8e0.html</url>
     <content><![CDATA[<div class="note info simple"><p>更新中</p>
@@ -433,110 +605,33 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo+github静态托管搭建个人博客</title>
-    <url>/zierc/2443647d.html</url>
-    <content><![CDATA[<h2 id="网站搭建和主题配置">网站搭建和主题配置</h2>
-<h3 id="请先看文章-小茗同学大佬的搭建教程">请先看文章:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗同学大佬的搭建教程</a></h3>
-<h3 id="由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）">由于上文已经非常完善，笔者只提几点注意事项（均为笔者踩的坑）</h3>
-<ul>
-<li>关于<code>_config.yml</code>中<code>deploy</code>的<code>branch</code>的配置，<code>master</code>要更换为<code>main</code></li>
-<li>关于 url 配置，文章中没有提到，但是笔者在搭建时发现，<strong>url 对大小写要求很严格</strong>，如果你的 github 域名没有完全正确的填写，那么网站的样式是加载不出来的</li>
-<li>CNAME 必须移到<code>source</code>文件夹中进行保留</li>
-</ul>
-<h2 id="链接永久化">链接永久化</h2>
-<div class="note simple"><p>减少网页链接丢失，同时减少 url 的层级，对爬虫比较友好</p>
-</div>
-<h3 id="如何实现">如何实现</h3>
-<p>下载插件<code>hexo-abbrlink</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-<p>在根目录中的<code>_conflg.yml</code>中配置生成链接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: zierc/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32 # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex</span><br></pre></td></tr></table></figure>
-<div class="note warning simple"><p>注意：上述代码中<code>zierc</code>为自定义内容，你想咋填咋填，但是会影响到关于<strong>图片位置生成的操作（hexo-asset-image 插件）</strong></p>
-</div>
-<p>由于<code>_config.yml</code>已经设置了 permalink， 这里重复设置，此时构建会报错，所以需要<strong>如下图</strong>一样注释一些默认的代码<br>
-<img src="/zierc/2443647d/Snipaste_2024-04-12_09-48-39.png" alt></p>
-<h3 id="如果你使用了hexo-asset-image">如果你使用了<code>hexo-asset-image</code></h3>
-<p>由于 image 的路径设置是根据 hexo 框架原来的路径走的，所以此时你会发现构建出的网站，图片无法加载<br>
-此时需要修改一下源码<br>
-找到目录<code>node_modules\hexo-asset-image\index.js</code></p>
-<ul>
-<li>在大概第 12 行左右<code>var link = data.permalink;</code>后面添加如下代码，用于定义变量 abbrlink，当然，具体添加到哪里看你自己的喜好，笔者只是为了逻辑清晰</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var abbrlink = data.abbrlink;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>然后在大概第 58 行左右，将代码<code>$(this).attr('src', config.root + link + src);</code>修改为<code> $(this).attr('src', config.root +'zierc/' +abbrlink +'/'+ src);</code><div class="note warning simple"><p>注意：此处回应前面的提示，修改之后的代码中<code>zierc</code>为自定义内容，你之前填的什么，现在就修改成什么</p>
-</div>
-</li>
-</ul>
-<p>之后为了防止一些奇怪的问题，直接 hexo 三件套就可以了</p>
-<h2 id="双线部署">双线部署</h2>
-<p>由于 github 部署访问太慢了<br>
-所以添加一个国内的 coding 部署，提高访问速度</p>
-<h3 id="如何实现-2">如何实现</h3>
-<p>首先，请详细观看<a href="https://blog.juanertu.com">卷二兔</a>大佬的<a href="https://www.bilibili.com/video/BV1hF411v7e1/?vd_source=27f2b246cedeb85170372b3386cefa14">b 站视频教程</a>本文的实现主要是参考了这位大佬。当你观看视频时，可能会发现一些场景和视频中不同，这就是笔者在此的作用了</p>
-<h4 id="deploy-配置">deploy 配置</h4>
-<p><code>_config.yml</code>配置和视频中所示不同，经过笔者尝试，如果按照视频的格式配置，会出现腾讯云和 GitHub 都不会自动部署的问题，经过查看 hexo 的文档和各种资料，笔者得到以下成功的配置方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: &quot;git&quot;</span><br><span class="line">    repository: git@github.com:ZiercPro/ZiercPro.github.io.git</span><br><span class="line">    branch: main</span><br><span class="line">  - type: &quot;git&quot;</span><br><span class="line">    repository: coding仓库地址</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-<p>如果这个也无法帮助到你，那可能需要你移步了，对此笔者感到非常抱歉。</p>
-<div class="note warning simple"><p>如果你发现该视频的方法不行，可以尝试另一位大佬的方法（笔者嫌麻烦没有尝试，但是这已经是笔者能找到的最新的方法了）<a href="https://www.cnblogs.com/Chen0495/p/17947479">文档链接-&gt;</a></p>
-</div>
-<h2 id="针对主题ButterFly遇到的问题">针对主题<a href="https://github.com/jerryc127/hexo-theme-butterfly">ButterFly</a>遇到的问题</h2>
-<h3 id="主题不显示">主题不显示</h3>
-<p>在切换主题之后，主题不显示，只显示一行文本：<br>
-<code>extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug</code><br>
-解决方案为：在根目录中执行以下命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-<p>然后重新构建，并在本地测试即可<br>
-如果还有什么问题请先运行<code>hexo clean</code> 之后再重新运行<code>hexo g</code></p>
-<h3 id="设置背景图片">设置背景图片</h3>
-<p>由于笔者没有仔细看 <code>_config.yml</code> 的选项，导致设置背景图片一直在网上寻找陈年方法，都没有效果，浪费了很多时间（4 小时）还没成功，后经过官方大佬点拨发现在<code>_config.yml</code>偏后半段，有<code>background</code>进行背景图片设置，如下图：<br>
-<img src="/zierc/2443647d/Snipaste_2024-04-10_21-14-27.png" alt></p>
-<div class="note simple"><p>因为 background 设置在比较后面，我并没有在官方文档中找到，所以不知道官方文档中有没有（肯定是有的），现身说法，望诸位不要像我一样犯傻</p>
-</div>
-<p>另附一张与官方大佬&quot;<strong>斗智斗勇</strong>&quot;的精彩画面。<s>望周知</s><br>
-<img src="/zierc/2443647d/image.png" alt="我是傻逼"></p>
-<h3 id="个性化鼠标指针样式">个性化鼠标指针样式</h3>
-<p><a href>该鼠标样式原创博客</a></p>
-<p>笔者不了解前端，只是自己加了个渐变色，这里直接给出自己的代码，不多做说明</p>
-<div class="note default simple"><p>JS 代码</p>
-</div>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="variable constant_">CURSOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Math</span>.<span class="property">lerp</span> = <span class="function">(<span class="params">a, b, n</span>) =&gt;</span> (<span class="number">1</span> - n) * a + n * b;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getStyle</span> = (<span class="params">el, attr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">window</span>.<span class="property">getComputedStyle</span></span><br><span class="line">      ? <span class="variable language_">window</span>.<span class="title function_">getComputedStyle</span>(el)[attr]</span><br><span class="line">      : el.<span class="property">currentStyle</span>[attr];</span><br><span class="line">  &#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cursor</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pos</span> = &#123; <span class="attr">curr</span>: <span class="literal">null</span>, <span class="attr">prev</span>: <span class="literal">null</span> &#125;;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pt</span> = [];</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">create</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">init</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">move</span>(<span class="params">left, top</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">style</span>[<span class="string">&quot;left&quot;</span>] = <span class="string">`<span class="subst">$&#123;left&#125;</span>px`</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">style</span>[<span class="string">&quot;top&quot;</span>] = <span class="string">`<span class="subst">$&#123;top&#125;</span>px`</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">create</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">cursor</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span> = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">id</span> = <span class="string">&quot;cursor&quot;</span>;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">append</span>(<span class="variable language_">this</span>.<span class="property">cursor</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; el.<span class="property">length</span>; i++)</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_">getStyle</span>(el[i], <span class="string">&quot;cursor&quot;</span>) == <span class="string">&quot;pointer&quot;</span>) <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">push</span>(el[i].<span class="property">outerHTML</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>((<span class="variable language_">this</span>.<span class="property">scr</span> = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;style&quot;</span>)));</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">scr</span>.<span class="property">innerHTML</span> = <span class="string">`* &#123;cursor: url(&quot;data:image/svg+xml,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 10 10&#x27; width=&#x27;12px&#x27; height=&#x27;12px&#x27;&gt;&lt;circle cx=&#x27;3&#x27; cy=&#x27;3&#x27; r=&#x27;6&#x27; opacity=&#x27;.3&#x27;/&gt;&lt;/svg&gt;&quot;) 1 1, auto&#125;`</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">refresh</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">scr</span>.<span class="title function_">remove</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pos</span> = &#123; <span class="attr">curr</span>: <span class="literal">null</span>, <span class="attr">prev</span>: <span class="literal">null</span> &#125;;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pt</span> = [];</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">create</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">init</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">init</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseover</span> = <span class="function">(<span class="params">e</span>) =&gt;</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">includes</span>(e.<span class="property">target</span>.<span class="property">outerHTML</span>) &amp;&amp;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseout</span> = <span class="function">(<span class="params">e</span>) =&gt;</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">includes</span>(e.<span class="property">target</span>.<span class="property">outerHTML</span>) &amp;&amp;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmousemove</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span> == <span class="literal">null</span> &amp;&amp; <span class="variable language_">this</span>.<span class="title function_">move</span>(e.<span class="property">clientX</span> - <span class="number">8</span>, e.<span class="property">clientY</span> - <span class="number">8</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span> = &#123; <span class="attr">x</span>: e.<span class="property">clientX</span> - <span class="number">8</span>, <span class="attr">y</span>: e.<span class="property">clientY</span> - <span class="number">8</span> &#125;;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseenter</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseleave</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmousedown</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">    <span class="variable language_">document</span>.<span class="property">onmouseup</span> = <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span> = <span class="title class_">Math</span>.<span class="title function_">lerp</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>.<span class="property">x</span>, <span class="number">0.15</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span> = <span class="title class_">Math</span>.<span class="title function_">lerp</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>.<span class="property">y</span>, <span class="number">0.15</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">move</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span> = <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">requestAnimationFrame</span>(<span class="function">() =&gt;</span> <span class="variable language_">this</span>.<span class="title function_">render</span>());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable constant_">CURSOR</span> = <span class="keyword">new</span> <span class="title class_">Cursor</span>();</span><br><span class="line">  <span class="comment">// 需要重新获取列表时，使用 CURSOR.refresh()</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<div class="note default simple"><p>css 代码</p>
-</div>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#cursor</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, <span class="number">#927aff</span>, <span class="number">#e22c72</span>, <span class="number">#4d20ee</span>, <span class="number">#42ff29</span>);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">400%</span> <span class="number">400%</span>;</span><br><span class="line">  <span class="attribute">animation</span>: gradientBG <span class="number">8s</span> ease infinite;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">12px</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.45</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">10086</span>;</span><br><span class="line">  <span class="attribute">pointer-events</span>: none;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">0.2s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">transition-property</span>: background, opacity, transform;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> gradientBG &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0%</span> <span class="number">50%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">50%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">50%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0%</span> <span class="number">50%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#cursor</span><span class="selector-class">.hidden</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#cursor</span><span class="selector-class">.hover</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.35</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#cursor</span><span class="selector-class">.active</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.7</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.75</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning simple"><p>但是这个鼠标样式还有个小问题，那就是鼠标如果在复制代码的按钮上时，会变回原指针</p>
-</div>
-<h4 id="暂无解决方案">暂无解决方案</h4>
-<p>按照原作者的意思，应该会检测元素中是否有<code>cursor:pointer</code> 于是笔者通过浏览器控制台，发现 copy 代码的按钮类名为<code>fas fa-paste copy-button</code><br>
-于是笔者又去查看源码，发现在<code>highlight.styl</code>文件中，关于<code>copy-button</code>代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.copy-button</span><br><span class="line">  position: absolute</span><br><span class="line">  right: 14px</span><br><span class="line">  cursor: pointer</span><br><span class="line">  transition: color .2s</span><br><span class="line"></span><br><span class="line">  &amp;:hover</span><br><span class="line">    color: $theme-color</span><br></pre></td></tr></table></figure>
-<p>这让笔者一脸懵逼，理论上来说应该能检测到<code>cursor:pointer</code>的啊<br>
-但是这些代码到底是什么意思，笔者也不知道，希望能有大佬来解决吧</p>
-<div class="note info simple"><p>提一嘴，笔者专门去其他人的博客中对比了，似乎这个问题并不针对这款鼠标样式，其他鼠标样式修改方法，同样检测不到 copy 按钮，会恢复原鼠标样式</p>
-</div>
-<h3 id="想要自定义其他样式，可以参考Butterfly-官方文档-获取本站源码">想要自定义其他样式，可以参考<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 官方文档</a> | <a href="https://github.com/ZiercPro/ZiercPro.github.io"><code>获取本站源码</code></a></h3>
-<h2 id="使用gitalk设置评论模块">使用<a href="https://github.com/gitalk/gitalk">gitalk</a>设置评论模块</h2>
-<p>先找到 <a href="https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96">butterfly 文档</a>中的<code>评论</code>，它会让你跟随<a href="https://github.com/gitalk/gitalk">gitalk</a>的教程，内容简单易懂</p>
-<h3 id="关于配置，笔者来帮忙避坑">关于配置，笔者来帮忙避坑</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#注意，到admin之前都需要加双引号，内容写到引号中</span><br><span class="line">gitalk:</span><br><span class="line">  client_id: &quot;&quot; #填写id</span><br><span class="line">  client_secret: &quot;&quot;#填写secret</span><br><span class="line">  repo: &quot;&quot;#填你的库名称，直接复制过来就可以了，笔者 使用的是托管网站的仓库，即ZiercPro.github.io</span><br><span class="line">  owner: &quot;&quot;#填写自己的github用户名，笔者就是ZiercPro</span><br><span class="line">  admin: [&quot;ZiercPro&quot;,&quot; &quot;,...]#填写能修改你仓库的人名，如果只是用于自己的博客网站，只需要和owner中填写的一样即可</span><br><span class="line">  option: #笔者没有设置</span><br></pre></td></tr></table></figure>
-<h2 id="笔者的吐槽">笔者的吐槽</h2>
-<p>笔者搭建过程中，一大感触就是，怎么感觉他们的过程和我的有点不一样，似乎很多文章都有点过时了。尽管最后，这些文章大概率依旧能够帮到笔者，但是总是会让笔者陷入混乱：这里到底该这样还是那样，为什么呢。当然，这个问题和有些<strong>平台或工具更新过快</strong>也脱不了关系。<br>
-所以笔者也在在本文顶部预先提醒读者，注意本文的时效性，可能一小段时间后，这篇文章就已经不能食用了，如果你发现这篇文章已经是数年前的古董，那还是找一篇更新的教程来看吧</p>
-<h2 id="结语">结语</h2>
-<p>这是笔者第一篇文章，诸多问题，不用谅解，直接来找我私聊即可（<br>
-如果有什么问题，可以发表评论或者通过各种渠道找我</p>
-<p>参考文献：<br>
-<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">小茗大佬 https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br>
-<a href="https://www.jianshu.com/p/aa936a8369fb">主题不显示问题 https://www.jianshu.com/p/aa936a8369fb</a><br>
-<a href="https://www.drflower.top/posts/5920b38e/">花桑大佬 https://www.drflower.top/posts/5920b38e/</a><br>
-<a href="https://blog.juanertu.com">卷二兔大佬 https://blog.juanertu.com</a></p>
+    <title>租房日志</title>
+    <url>/zierc/cb604593.html</url>
+    <content><![CDATA[<p>2024年9月，我已经到了大三，因为各种原因，选择在校外不远处的街道租房。</p>
+<h2 id="准备工作">准备工作</h2>
+<p>第一次租房，没有经验，很多方面没有考虑到。<br>
+房源来自也在附近租房的朋友介绍的一个二手房东（后用奸商代替），在上学期即将毕业时，和奸商谈好房价和位置，然后对方就要求给租金，理由是帮我预留房间。由于当时已经商量好了明确的时间和位置，我也问过我妈租金是否合理并得到肯定的答复（我妈以为我实地看过房了），所以我就毫不犹豫的将租金上交…因为即将回家，甚至房都没看（只看了视频）</p>
+<h2 id="被坑">被坑</h2>
+<p>等到开学，来到奸商介绍的位置，发现和视频中不是同一间，我便询问，结果奸商说帮我换了一个，比之前的大（能看出来确实比之前的大，但是只是厕所大了点，没什么用）。<br>
+我立即询问是不是房租也贵了，结果不出所料，比之前的贵了100。此时我已经搬了一部分行李了，也知道已经掉到了坑里，能预见他后续会如何解释只能租这间，所以只能和他拉扯价格。然而我刚说最多比之前贵50，他就答应了…唉…我***。</p>
+<p>然而还没结束，房租贵了也就罢了，奸商承诺说200兆宽带，我怎么也想不到，居然是几人共用200兆，等我发现网速有问题时，已经预付了一年的网费了（不长记性…）。<br>
+只能在签租凭合同的时候，要求退房时返还剩余的房费，并且让他派人来往我房间装个路由器，分100兆进来。<br>
+那个他让来搞宽带的人和他自然也是一伙的，除了给我打了个电话说过一天来，就没消息了（搞笑的是，除了宽带的事，我还叫他让人来修马桶冲水按钮，结果同样是说第二天来，修马桶那个师傅第二天上午就来了，三两下就修好了，呵呵…）。<br>
+最后我也是自己重新找营业厅办理了1000兆宽带，除了自己买路由器的钱，算下来就70每月。<br>
+说到租凭合同，签的时候我就要求，只签4个月，但是他说必须一年，如果走了可以让他转租出去。这坑死人的地方要我住一年，多少有点搞笑了。所以我要求在附加合同上添加如果我4个月之后走人，必须退还押金和网费。不知道这个租凭合同到时能否帮我拿回押金。能预见的是，到时候又是一场“血战”。<br>
+这个奸商，到了他手上的钱，不会轻易让你拿回来。</p>
+<p>后来我另一个同学（后称小明）—本来是和我同一时间出来租房的—来找奸商时，我和小明说，要注意网费和房租时长，结果小明居然成功避坑了，没交网费，合同也是4个月的。<br>
+总结下来避坑的方法就是，他在没交钱之前就已经和对方将我之前踩坑的地方都商量清楚了…</p>
+<h2 id="感慨">感慨</h2>
+<p>一直呆在象牙塔中，感觉自己嫩的像一株刚破土的芽儿。<br>
+只是租房就被坑的无语凝噎，只能说只要涉及到钱的事情，就不会简单。<br>
+希望这次教训能在脑海中停留久一点，下次这种时候长长记性。</p>
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>个人日志</category>
       </categories>
       <tags>
-        <tag>网站</tag>
-        <tag>博客</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -645,56 +740,6 @@
       </tags>
   </entry>
   <entry>
-    <title>租房日志</title>
-    <url>/zierc/cb604593.html</url>
-    <content><![CDATA[<p>2024年9月，我已经到了大三，因为各种原因，选择在校外不远处的街道租房。</p>
-<h2 id="准备工作">准备工作</h2>
-<p>第一次租房，没有经验，很多方面没有考虑到。<br>
-房源来自也在附近租房的朋友介绍的一个二手房东（后用奸商代替），在上学期即将毕业时，和奸商谈好房价和位置，然后对方就要求给租金，理由是帮我预留房间。由于当时已经商量好了明确的时间和位置，我也问过我妈租金是否合理并得到肯定的答复（我妈以为我实地看过房了），所以我就毫不犹豫的将租金上交…因为即将回家，甚至房都没看（只看了视频）</p>
-<h2 id="被坑">被坑</h2>
-<p>等到开学，来到奸商介绍的位置，发现和视频中不是同一间，我便询问，结果奸商说帮我换了一个，比之前的大（能看出来确实比之前的大，但是只是厕所大了点，没什么用）。<br>
-我立即询问是不是房租也贵了，结果不出所料，比之前的贵了100。此时我已经搬了一部分行李了，也知道已经掉到了坑里，能预见他后续会如何解释只能租这间，所以只能和他拉扯价格。然而我刚说最多比之前贵50，他就答应了…唉…我***。</p>
-<p>然而还没结束，房租贵了也就罢了，奸商承诺说200兆宽带，我怎么也想不到，居然是几人共用200兆，等我发现网速有问题时，已经预付了一年的网费了（不长记性…）。<br>
-只能在签租凭合同的时候，要求退房时返还剩余的房费，并且让他派人来往我房间装个路由器，分100兆进来。<br>
-那个他让来搞宽带的人和他自然也是一伙的，除了给我打了个电话说过一天来，就没消息了（搞笑的是，除了宽带的事，我还叫他让人来修马桶冲水按钮，结果同样是说第二天来，修马桶那个师傅第二天上午就来了，三两下就修好了，呵呵…）。<br>
-最后我也是自己重新找营业厅办理了1000兆宽带，除了自己买路由器的钱，算下来就70每月。<br>
-说到租凭合同，签的时候我就要求，只签4个月，但是他说必须一年，如果走了可以让他转租出去。这坑死人的地方要我住一年，多少有点搞笑了。所以我要求在附加合同上添加如果我4个月之后走人，必须退还押金和网费。不知道这个租凭合同到时能否帮我拿回押金。能预见的是，到时候又是一场“血战”。<br>
-这个奸商，到了他手上的钱，不会轻易让你拿回来。</p>
-<p>后来我另一个同学（后称小明）—本来是和我同一时间出来租房的—来找奸商时，我和小明说，要注意网费和房租时长，结果小明居然成功避坑了，没交网费，合同也是4个月的。<br>
-总结下来避坑的方法就是，他在没交钱之前就已经和对方将我之前踩坑的地方都商量清楚了…</p>
-<h2 id="感慨">感慨</h2>
-<p>一直呆在象牙塔中，感觉自己嫩的像一株刚破土的芽儿。<br>
-只是租房就被坑的无语凝噎，只能说只要涉及到钱的事情，就不会简单。<br>
-希望这次教训能在脑海中停留久一点，下次这种时候长长记性。</p>
-]]></content>
-      <categories>
-        <category>个人日志</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>有幸相遇</title>
-    <url>/link/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>画展</title>
     <url>/gallery/index.html</url>
     <content><![CDATA[<div class="gallery-group-main">
@@ -720,6 +765,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>个人画廊</title>
     <url>/%E4%B8%AA%E4%BA%BA%E7%94%BB%E5%BB%8A/index.html</url>
     <content><![CDATA[<div class="gallery-container" data-type="data" data-button>
@@ -743,5 +793,20 @@
       </div>
     </div>
 ]]></content>
+  </entry>
+  <entry>
+    <title>有幸相遇</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
