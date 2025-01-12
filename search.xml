@@ -748,7 +748,7 @@ well well well<br>
   <figcaption>
   <div class="gallery-group-name">米山舞</div>
   <p>大大我爱你</p>
-  <a href="/%E4%B8%AA%E4%BA%BA%E7%94%BB%E5%BB%8A"></a>
+  <a href="/./%E7%B1%B3%E5%B1%B1%E8%88%9E"></a>
   </figcaption>
   </figure>
   
@@ -758,6 +758,24 @@ well well well<br>
   <div class="gallery-group-name">个人</div>
   <p>不会画画的渣渣</p>
   <a href="/./%E4%B8%AA%E4%BA%BA%E7%94%BB%E5%BB%8A"></a>
+  </figcaption>
+  </figure>
+  
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src="https://s2.loli.net/2024/09/07/A6MSfNImzou3iRE.png" alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">新海诚</div>
+  <p>现实与梦幻的结合</p>
+  <a href="/./%E6%96%B0%E6%B5%B7%E8%AF%9A"></a>
+  </figcaption>
+  </figure>
+  
+<figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src="https://s2.loli.net/2024/04/10/2G8QxDbNlZofsPM.png" alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">赛博朋克:边缘行者</div>
+  <p>敬大卫</p>
+  <a href="/./%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B-%E8%BE%B9%E7%BC%98%E8%A1%8C%E8%80%85"></a>
   </figcaption>
   </figure>
   
@@ -772,23 +790,15 @@ well well well<br>
   <entry>
     <title>个人画廊</title>
     <url>/%E4%B8%AA%E4%BA%BA%E7%94%BB%E5%BB%8A/index.html</url>
-    <content><![CDATA[<div class="gallery-container" data-type="data" data-button>
-      <div class="gallery-data">[{"url":"./头像.png","alt":""}]</div>
+    <content><![CDATA[<!-- 图床 -->
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://s2.loli.net/2025/01/12/u1rNBhPjb2mqZoW.png","alt":"头像-女"},{"url":"https://s2.loli.net/2025/01/12/IaBTXb7vCdZH2Wx.png","alt":"头像练习-川崎和奥寺"},{"url":"https://s2.loli.net/2025/01/12/wOc1XeH7FunNMgP.png","alt":"头像练习-瑞贝卡"},{"url":"https://s2.loli.net/2025/01/12/gtmpLdhNCDXoGM7.png","alt":"全身练习-女死神"},{"url":"https://s2.loli.net/2025/01/12/QsWkxq96iGtIuca.png","alt":"风"}]</div>
       <div class="gallery-items">
       </div>
     </div>
+<!-- 上传仓库 -->
 <div class="gallery-container" data-type="data" data-button>
-      <div class="gallery-data">[{"url":"./女死神.png","alt":""}]</div>
-      <div class="gallery-items">
-      </div>
-    </div>
-<div class="gallery-container" data-type="data" data-button>
-      <div class="gallery-data">[{"url":"./川崎和奥寺.png","alt":""},{"url":"./练习11.20.png","alt":""}]</div>
-      <div class="gallery-items">
-      </div>
-    </div>
-<div class="gallery-container" data-type="data" data-button>
-      <div class="gallery-data">[{"url":"./群草.png","alt":""},{"url":"./风.png","alt":""}]</div>
+      <div class="gallery-data">[{"url":"./群草.png","alt":"练习-群草"}]</div>
       <div class="gallery-items">
       </div>
     </div>
@@ -808,5 +818,42 @@ well well well<br>
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>米山舞</title>
+    <url>/%E7%B1%B3%E5%B1%B1%E8%88%9E/index.html</url>
+    <content><![CDATA[<!-- 图床-->
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://s2.loli.net/2024/04/11/5EfvsRmwIqp1QJt.png","alt":""},{"url":"https://s2.loli.net/2024/04/10/96dxTkPe2uKvHIh.png","alt":""},{"url":"https://s2.loli.net/2024/04/10/qZCOtoAbPQVn2K1.png","alt":""}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
+<!-- 上传仓库-->
+<!-- <div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-data">[]</div>
+      <div class="gallery-items">
+      </div>
+    </div> -->]]></content>
+  </entry>
+  <entry>
+    <title>新海诚</title>
+    <url>/%E6%96%B0%E6%B5%B7%E8%AF%9A/index.html</url>
+    <content><![CDATA[<!-- 图床-->
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://s2.loli.net/2024/09/07/A6MSfNImzou3iRE.png","alt":""},{"url":"https://s2.loli.net/2025/01/08/vwio2sBYtzm4hUl.png","alt":""},{"url":"https://s2.loli.net/2025/01/06/cVIb2pRsZSl5JYm.png","alt":"奥寺美纪"}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>]]></content>
+  </entry>
+  <entry>
+    <title>赛博朋克:边缘行者</title>
+    <url>/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B-%E8%BE%B9%E7%BC%98%E8%A1%8C%E8%80%85/index.html</url>
+    <content><![CDATA[<!-- 图床-->
+<div class="gallery-container" data-type="data" data-button>
+      <div class="gallery-data">[{"url":"https://s2.loli.net/2024/04/10/4EIZtRGhvSOwpN2.png","alt":""},{"url":"https://s2.loli.net/2024/04/10/2G8QxDbNlZofsPM.png","alt":""},{"url":"https://s2.loli.net/2024/04/10/pPxjERGS4mh6Zyn.png","alt":""}]</div>
+      <div class="gallery-items">
+      </div>
+    </div>
+]]></content>
   </entry>
 </search>
