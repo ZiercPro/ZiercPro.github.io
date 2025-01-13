@@ -740,6 +740,81 @@ well well well<br>
       </tags>
   </entry>
   <entry>
+    <title>c++之string</title>
+    <url>/zierc/3d17384a.html</url>
+    <content><![CDATA[<div class="note warning simple"><p>模板还没复习，有点不记得了，记得回来填坑。</p>
+</div>
+<h3 id="string是什么">string是什么</h3>
+<p>在C++中，string是一个模板类—basic_string的别名,而basic_string是一个封装好的，便于我们对字符序列进行操作的模板类，可以方便的针对<code>单个字符内存占用的问题</code>，实现好几个版本的string，这个模板类提供了很多方便的方法，如size，find…以及操作安全性。定义如下：</p>
+<p>Visual Studio：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">_EXPORT_STD <span class="keyword">using</span> string  = basic_string&lt;<span class="type">char</span>, char_traits&lt;<span class="type">char</span>&gt;, allocator&lt;<span class="type">char</span>&gt;&gt;;</span><br><span class="line">_EXPORT_STD <span class="keyword">using</span> wstring = basic_string&lt;<span class="type">wchar_t</span>, char_traits&lt;<span class="type">wchar_t</span>&gt;, allocator&lt;<span class="type">wchar_t</span>&gt;&gt;;</span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> __cpp_lib_char8_t</span></span><br><span class="line">_EXPORT_STD <span class="keyword">using</span> u8string = basic_string&lt;<span class="type">char8_t</span>, char_traits&lt;<span class="type">char8_t</span>&gt;, allocator&lt;<span class="type">char8_t</span>&gt;&gt;;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// defined(__cpp_lib_char8_t)</span></span></span><br><span class="line">_EXPORT_STD <span class="keyword">using</span> u16string = basic_string&lt;<span class="type">char16_t</span>, char_traits&lt;<span class="type">char16_t</span>&gt;, allocator&lt;<span class="type">char16_t</span>&gt;&gt;;</span><br><span class="line">_EXPORT_STD <span class="keyword">using</span> u32string = basic_string&lt;<span class="type">char32_t</span>, char_traits&lt;<span class="type">char32_t</span>&gt;, allocator&lt;<span class="type">char32_t</span>&gt;&gt;;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>G++:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">namespace</span> std _GLIBCXX_VISIBILITY(<span class="keyword">default</span>)</span><br><span class="line">&#123;</span><br><span class="line">_GLIBCXX_BEGIN_NAMESPACE_VERSION</span><br><span class="line">  <span class="keyword">namespace</span> pmr &#123;</span><br><span class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> _CharT, <span class="keyword">typename</span> _Traits = char_traits&lt;_CharT&gt;&gt;</span><br><span class="line">      <span class="keyword">using</span> basic_string = std::basic_string&lt;_CharT, _Traits,</span><br><span class="line">					     polymorphic_allocator&lt;_CharT&gt;&gt;;</span><br><span class="line">    <span class="keyword">using</span> string    = basic_string&lt;<span class="type">char</span>&gt;;</span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> _GLIBCXX_USE_CHAR8_T</span></span><br><span class="line">    <span class="keyword">using</span> u8string  = basic_string&lt;<span class="type">char8_t</span>&gt;;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    <span class="keyword">using</span> u16string = basic_string&lt;<span class="type">char16_t</span>&gt;;</span><br><span class="line">    <span class="keyword">using</span> u32string = basic_string&lt;<span class="type">char32_t</span>&gt;;</span><br><span class="line">    <span class="keyword">using</span> wstring   = basic_string&lt;<span class="type">wchar_t</span>&gt;;</span><br><span class="line">  &#125; <span class="comment">// namespace pmr</span></span><br><span class="line">_GLIBCXX_END_NAMESPACE_VERSION</span><br><span class="line">&#125; <span class="comment">// namespace std    </span></span><br></pre></td></tr></table></figure>
+<h3 id="string工作原理">string工作原理</h3>
+<p>讲到这个首先要讲一讲char和char*(char[])。</p>
+<h4 id="char-char">char/char*</h4>
+<p>在C语言中，没有string类型，只有char类型，所以如果需要表示字符串，需要通过字符数组，也就是char[]或者说是char*。<br>
+一个char类型占用一个字节，那么如果一个字符串长度为n，字符数组的长度就是n吗？答案是否定的，原因是内存中需要在尾部有<code>NULL(ASCll码为0)</code>字符作为字符串结尾的判断。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> a[] = <span class="string">&quot;Zierc&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>上面的代码中，a在内存中的数据如下图：<br>
+<img src="/zierc/3d17384a/a.png" alt><br>
+因为<code>&quot;Zierc&quot;</code>在cpp中默认是<code>const char[]</code>类型，所以自动会补上一个0字符。</p>
+<hr>
+<p>如果按照数组的初始化方式，不去写这个0，会怎么样呢？</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> a[<span class="number">5</span>] = &#123; <span class="string">&#x27;Z&#x27;</span>,<span class="string">&#x27;i&#x27;</span> ,<span class="string">&#x27;e&#x27;</span> ,<span class="string">&#x27;r&#x27;</span> ,<span class="string">&#x27;c&#x27;</span> &#125;;</span><br><span class="line">std::cout &lt;&lt; a &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<p><img src="/zierc/3d17384a/image.png" alt><br>
+可以看到出现了内存错误访问的问题，还没有报错！这相当危险！</p>
+<hr>
+<p>上面介绍的是标准的char，如果需要更多的字符表示，则需要<strong>一个字符占用多个字节</strong>，可以用到这些类型：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">wchar_t</span>* a = <span class="string">L&quot;两个字节&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char16_t</span>* b =<span class="string">u&quot;两个字节&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char32_t</span>* c = <span class="string">U&quot;四个字节&quot;</span>;</span><br></pre></td></tr></table></figure>
+<div class="note warning simple"><p>注意，不同char类型，字符串的初始化方式也不同。</p>
+</div>
+<p>可以发现，<code>wchar_t</code>和<code>char16_t</code>都是两个字节，他们有上面区别呢？区别就是：<strong><code>wchar_t</code>的实际占用取决于编译器，一般来说，在windows中，它占2字节，在linux中，它占用4字节，而<code>char16_t</code>永远是占用2字节。</strong><br>
+关于这些孪生兄弟，和编码关系很大，可以先挖个坑，看看后面有无时间研究一下。</p>
+<h4 id="string">string</h4>
+<p>string本质上就是一个<code>const char[]</code>，和原始的字符数组一样，由于需要判断字符串尾部，所以需要多一个字节的空间存放 <code>0</code>来作为结束标志，所以实际长度会是字符串长度+1。<br>
+对于string，同样由于编码问题，有几个孪生兄弟：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::wstring a = <span class="string">L&quot;对应const wchar_t*&quot;</span>;</span><br><span class="line">std::u16string b = <span class="string">u&quot;对应const char16_t*&quot;</span>;</span><br><span class="line">std::u32string c = <span class="string">U&quot;对应const char32_t*&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="string的拼接">string的拼接</h3>
+<p>在cpp中，所有的字符串常量都会被存储在常量区中（为什么要这样不是很理解，似乎可以实现共享，减少内存占用）<br>
+我们随便写一段代码，通过字符串常量初始化一个字符串，然后获取它生成的汇编文件<br>
+cpp：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span>* a = <span class="string">&quot;Zierc&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>生成的汇编：<br>
+<img src="/zierc/3d17384a/b.png" alt="alt text"><br>
+可以看到，确实是在常量区定义了一个字符串</p>
+<p>首先，在初始化阶段，由于两个字符串常量指针不能直接拼接，所以不允许出现以下写法：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Wrong</span></span><br><span class="line">std::string a = <span class="string">&quot;Zie&quot;</span>+<span class="string">&quot;rc&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>如果需要在初始化时进行拼接，可以通过以下两种方法</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line">std::string x = std::<span class="built_in">string</span>(<span class="string">&quot;Zie&quot;</span>)+<span class="string">&quot;rc&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std::string_literals;</span><br><span class="line">std::string y = <span class="string">&quot;Zie&quot;</span>s+<span class="string">&quot;rc&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>这两种方法本质上是一样的，第二个方法中，字符串尾部的s其实就是一个方法，返回一个初始化为<code>&quot;Zie&quot;</code>的string类型，这样就可以通过string重载的<code>+</code>进行拼接了，也就是第一个方法的做法。</p>
+<hr>
+<p>然后是初始化之后的修改，由于这个<code>&quot;Zierc&quot;</code>所在的内存区间是只读的，如果我们想要进行修改，要如何做呢？<br>
+实际上，我们拿到是一份常量区数据的复制，而所有修改都是在复制品，也就是一个变量上进行的。<br>
+依然是写一段代码，然后看生成的源文件，同时也可以通过观察内存变化，来进一步验证。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> a[] = <span class="string">&quot;Zierc&quot;</span>; <span class="comment">//line5</span></span><br><span class="line">a[<span class="number">2</span>] = <span class="string">&#x27;a&#x27;</span>; <span class="comment">//line6</span></span><br></pre></td></tr></table></figure>
+<p>对应的汇编，我们只复制关键部分：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;	COMDAT ??_C@_05GCFHODJK@Zierc@</span><br><span class="line">CONST	SEGMENT</span><br><span class="line">??_C@_05GCFHODJK@Zierc@ DB &#x27;Zierc&#x27;, 00H			; `string&#x27;</span><br><span class="line">CONST	ENDS</span><br><span class="line">...</span><br><span class="line">_TEXT	SEGMENT</span><br><span class="line">a$ = 4</span><br><span class="line">__$ArrayPad$ = 216</span><br><span class="line">...</span><br><span class="line">; Line 5</span><br><span class="line">	lea	rax, QWORD PTR a$[rbp]</span><br><span class="line">	lea	rcx, OFFSET FLAT:??_C@_05GCFHODJK@Zierc@</span><br><span class="line">	mov	rdi, rax</span><br><span class="line">	mov	rsi, rcx</span><br><span class="line">	mov	ecx, 6</span><br><span class="line">	rep movsb</span><br><span class="line">; Line 6</span><br><span class="line">	mov	eax, 1</span><br><span class="line">	imul	rax, rax, 2</span><br><span class="line">	mov	BYTE PTR a$[rbp+rax], 97		; 00000061H</span><br></pre></td></tr></table></figure>
+<p>可以看到，当我们初始化一个字符数组时，是将常量复制到变量<code>a$</code>，也就是说实际操作的是这个变量，后面进行修改，也是在这个变量上进行修改。实际上的<code>Zierc</code>一直没动过。<br>
+所以这个常量区的<code>Zierc</code>意义是什么呢，我觉得可能一般写cpp都会先定义好全局的const string，这样的话这个常量区的字符串就有意义了。</p>
+<p>在内存区中，同样，在修改前后，指针<code>a</code>的地址没有发生变化（图就不附了，偷个懒，感兴趣可以自行验证）。</p>
+<h3 id="string段落格式">string段落格式</h3>
+<p>如果需要输入一整个段落或者是一大串代码，可能就需要使用这种格式：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line">std::string a = <span class="string">&quot;Zierc\n&quot;</span></span><br><span class="line">		<span class="string">&quot;Zierc\n&quot;</span></span><br><span class="line">		<span class="string">&quot;Zierc\n&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">std::string b = <span class="string">R&quot;(Zierc</span></span><br><span class="line"><span class="string">Zierc</span></span><br><span class="line"><span class="string">Zierc )&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="小结">小结</h3>
+<p>本文没有将太多string的使用，主要是研究工作原理。<br>
+就这样，洗澡！</p>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
