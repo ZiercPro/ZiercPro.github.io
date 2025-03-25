@@ -525,7 +525,7 @@
   </entry>
   <entry>
     <title>地牢大杂烩各种模块实现思路记录</title>
-    <url>/zierc/6e98c4a8.html</url>
+    <url>/zierc/e99ba587.html</url>
     <content><![CDATA[<p>项目Github仓库:<a href="https://github.com/ZiercPro/DungeonSmorgasbord">https://github.com/ZiercPro/DungeonSmorgasbord</a></p>
 <h2 id="设置">设置</h2>
 <h3 id="进入时配置">进入时配置</h3>
@@ -652,11 +652,13 @@ well well well<br>
   </entry>
   <entry>
     <title>游戏代码设计模式学习路线与思路</title>
-    <url>/zierc/a2617f52.html</url>
+    <url>/zierc/7abeaa02.html</url>
     <content><![CDATA[<div class="note info simple"><p>更新中</p>
 </div>
 <h2 id="软件设计的原则">软件设计的原则</h2>
 <p>先学习软件设计的基本原则，虽说笔者主攻方向为基于 Unity 引擎的游戏开发，但是游戏开发与软件开发有许多共通处，学习游戏设计模式可以为后续开发与工具的学习运用打下坚实的基础</p>
+<ul>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E5%88%99">软件设计的原则</a>
 <ul>
 <li><a href="#%E5%BC%80%E9%97%AD%E5%8E%9F%E5%88%99ocp">开闭原则（OCP）</a></li>
 <li><a href="#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99srp">单一职责原则（SRP）</a></li>
@@ -665,6 +667,8 @@ well well well<br>
 <li><a href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99isp">接口隔离原则（ISP）</a></li>
 <li><a href="#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99lod">迪米特法则（LOD）</a></li>
 <li><a href="#%E5%90%88%E6%88%90%E8%81%9A%E5%90%88%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99carp">合成/聚合复用原则（CARP）</a></li>
+</ul>
+</li>
 </ul>
 <h3 id="开闭原则（OCP）">开闭原则（OCP）</h3>
 <p>软件设计的基本原则，后续六个原则的最终目的都是为了满足开闭原则<br>
@@ -762,7 +766,7 @@ well well well<br>
 因为<code>&quot;Zierc&quot;</code>在cpp中默认是<code>const char[]</code>类型，所以自动会补上一个0字符。</p>
 <hr>
 <p>如果按照数组的初始化方式，不去写这个0，会怎么样呢？</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> a[<span class="number">5</span>] = &#123; <span class="string">&#x27;Z&#x27;</span>,<span class="string">&#x27;i&#x27;</span> ,<span class="string">&#x27;e&#x27;</span> ,<span class="string">&#x27;r&#x27;</span> ,<span class="string">&#x27;c&#x27;</span> &#125;;</span><br><span class="line">std::cout &lt;&lt; a &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//正确的写法</span></span><br><span class="line"><span class="comment">//char a[5] = &#123; &#x27;Z&#x27;,&#x27;i&#x27; ,&#x27;e&#x27; ,&#x27;r&#x27; ,&#x27;c&#x27; ,0&#125;;</span></span><br><span class="line"><span class="comment">//---</span></span><br><span class="line"><span class="type">char</span> a[<span class="number">5</span>] = &#123; <span class="string">&#x27;Z&#x27;</span>,<span class="string">&#x27;i&#x27;</span> ,<span class="string">&#x27;e&#x27;</span> ,<span class="string">&#x27;r&#x27;</span> ,<span class="string">&#x27;c&#x27;</span> &#125;;</span><br><span class="line">std::cout &lt;&lt; a &lt;&lt; std::endl;</span><br></pre></td></tr></table></figure>
 <p><img src="/zierc/3d17384a/image.png" alt><br>
 可以看到出现了内存错误访问的问题，还没有报错！这相当危险！</p>
 <hr>
@@ -778,7 +782,7 @@ well well well<br>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::wstring a = <span class="string">L&quot;对应const wchar_t*&quot;</span>;</span><br><span class="line">std::u16string b = <span class="string">u&quot;对应const char16_t*&quot;</span>;</span><br><span class="line">std::u32string c = <span class="string">U&quot;对应const char32_t*&quot;</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="string的拼接">string的拼接</h3>
 <p>在cpp中，所有的字符串常量都会被存储在常量区中（为什么要这样不是很理解，似乎可以实现共享，减少内存占用）<br>
-我们随便写一段代码，通过字符串常量初始化一个字符串，然后获取它生成的汇编文件<br>
+我们随便写一段代码，通过字符串常量初始化一个字符数组，然后获取它生成的汇编文件<br>
 cpp：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span>* a = <span class="string">&quot;Zierc&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>生成的汇编：<br>
@@ -792,9 +796,9 @@ cpp：</p>
 <hr>
 <p>然后是初始化之后的修改，由于这个<code>&quot;Zierc&quot;</code>所在的内存区间是只读的，如果我们想要进行修改，要如何做呢？<br>
 实际上，我们拿到是一份常量区数据的复制，而所有修改都是在复制品，也就是一个变量上进行的。<br>
-依然是写一段代码，然后看生成的源文件，同时也可以通过观察内存变化，来进一步验证。</p>
+依然是写一段代码，然后看生成的汇编文件，同时也可以通过观察内存变化，来进一步验证。</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> a[] = <span class="string">&quot;Zierc&quot;</span>; <span class="comment">//line5</span></span><br><span class="line">a[<span class="number">2</span>] = <span class="string">&#x27;a&#x27;</span>; <span class="comment">//line6</span></span><br></pre></td></tr></table></figure>
-<p>对应的汇编，我们只复制关键部分：</p>
+<p>对应的汇编，只复制了关键部分：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;	COMDAT ??_C@_05GCFHODJK@Zierc@</span><br><span class="line">CONST	SEGMENT</span><br><span class="line">??_C@_05GCFHODJK@Zierc@ DB &#x27;Zierc&#x27;, 00H			; `string&#x27;</span><br><span class="line">CONST	ENDS</span><br><span class="line">...</span><br><span class="line">_TEXT	SEGMENT</span><br><span class="line">a$ = 4</span><br><span class="line">__$ArrayPad$ = 216</span><br><span class="line">...</span><br><span class="line">; Line 5</span><br><span class="line">	lea	rax, QWORD PTR a$[rbp]</span><br><span class="line">	lea	rcx, OFFSET FLAT:??_C@_05GCFHODJK@Zierc@</span><br><span class="line">	mov	rdi, rax</span><br><span class="line">	mov	rsi, rcx</span><br><span class="line">	mov	ecx, 6</span><br><span class="line">	rep movsb</span><br><span class="line">; Line 6</span><br><span class="line">	mov	eax, 1</span><br><span class="line">	imul	rax, rax, 2</span><br><span class="line">	mov	BYTE PTR a$[rbp+rax], 97		; 00000061H</span><br></pre></td></tr></table></figure>
 <p>可以看到，当我们初始化一个字符数组时，是将常量复制到变量<code>a$</code>，也就是说实际操作的是这个变量，后面进行修改，也是在这个变量上进行修改。实际上的<code>Zierc</code>一直没动过。<br>
 所以这个常量区的<code>Zierc</code>意义是什么呢，我觉得可能一般写cpp都会先定义好全局的const string，这样的话这个常量区的字符串就有意义了。</p>
@@ -802,9 +806,11 @@ cpp：</p>
 <h3 id="string段落格式">string段落格式</h3>
 <p>如果需要输入一整个段落或者是一大串代码，可能就需要使用这种格式：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1</span></span><br><span class="line">std::string a = <span class="string">&quot;Zierc\n&quot;</span></span><br><span class="line">		<span class="string">&quot;Zierc\n&quot;</span></span><br><span class="line">		<span class="string">&quot;Zierc\n&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">std::string b = <span class="string">R&quot;(Zierc</span></span><br><span class="line"><span class="string">Zierc</span></span><br><span class="line"><span class="string">Zierc )&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="补充">补充</h3>
+<p>string的定义其实在std的命名空间中，但是string库里面包含了<code>&lt;&lt;</code>符号的重载</p>
 <h3 id="小结">小结</h3>
-<p>本文没有将太多string的使用，主要是研究工作原理。<br>
-就这样，洗澡！</p>
+<p>本文没有讲太多string的使用，主要是研究工作原理。</p>
+<p>就这样，洗澡！</p>
 ]]></content>
       <categories>
         <category>c++</category>
@@ -840,7 +846,7 @@ cpp：</p>
     </div>]]></content>
   </entry>
   <entry>
-    <title>画展</title>
+    <title>画廊</title>
     <url>/gallery/index.html</url>
     <content><![CDATA[<div class="gallery-group-main">
 <figure class="gallery-group">
